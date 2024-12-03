@@ -1,0 +1,89 @@
+@import "../../../styles.scss";
+@import "../../../assets/fonts/fira-code/fira_code.css";
+
+header {
+  font-family: 'Fira Code', monospace;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 6rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+img {
+  width: 80px;
+  height: 64px;
+  height: auto;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+ul {
+  display: flex;
+  gap: 24px;
+
+
+}
+
+li {
+
+
+  &:hover {
+    cursor: pointer;
+    color: $primary-color
+  }
+}
+
+.left-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: 96px;
+}
+
+.right-contaner {
+  display: flex;
+  align-items: center;
+
+  margin-right: 96px;
+}
+
+.language-toggle {
+  display: flex;
+  border: 1px solid $primary-color;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 80px;
+  height: 25px;
+  border-radius: 30px;
+}
+
+.lang-btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  color: $primary-half;
+  font-size: 12px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-btn:hover {
+ color: white;
+}
+
+.lang-btn.active {
+  background-color: $primary-color;
+  color: white;
+}
+

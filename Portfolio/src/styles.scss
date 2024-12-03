@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+$first-color: rgba(28, 28, 28, 1);
+$second-color: rgba(8, 70, 59, 1);
+$primary-color: rgba(61, 207, 182, 1);
+$primary-half: rgba(61, 207, 182, 0.5);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1940px;
+    margin: auto;
+    background: linear-gradient(90deg, $first-color, $second-color);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+ul {
+    list-style: none;
+}
