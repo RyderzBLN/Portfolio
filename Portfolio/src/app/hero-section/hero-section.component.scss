@@ -2,6 +2,7 @@
 
 section {
   height: 100dvh;
+  overflow: hidden;
   position: relative;
 }
 
@@ -88,13 +89,54 @@ section {
 
 @keyframes scroll {
   from {
-    transform: translateX(0); 
+    transform: translateX(0);
   }
   to {
-    transform: translateX(-100%); 
+    transform: translateX(-100%);
   }
+}
 
+.wrapper {
+  position: relative;
+  height: 37%;
+  margin: 0 96px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+}
 
+.stretch {
+  position: absolute;
+  bottom: 0;
 
+  width: 2px;
+}
 
+.left-side {
+  left: 15px;
+  height: 75%;
+  border: 1px solid $primary-color;
+}
+
+.right-side {
+  right: 15px;
+  height: 65%;
+  border: 1px solid white;
+}
+
+.oval-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3px;
+  width: 30px;
+  height: 48px;
+  border-radius: 30px;
+  border: 1.5px solid $primary-color;
+}
+
+.svg-wrapper {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
 }
