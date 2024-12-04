@@ -1,6 +1,100 @@
 @import "../../styles.scss";
 
 section {
-    height: 100dvh;
-    background: linear-gradient(90deg, $first-color, $second-color);
+  height: 100dvh;
+  position: relative;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 9rem;
+  display: flex;
+  color: white;
+
+  > h3 {
+    font-size: 40px;
+    font-family: "Fira Code", monospace;
+  }
+  > h1 {
+    font-size: 128px;
+    font-family: "Karla", monospace;
+    font-weight: bold;
+  }
+}
+
+.banner-container {
+  display: flex;
+  gap: 48px;
+  margin-top: 40px;
+  align-items: center;
+  flex-direction: row;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 100px;
+  width: 170px;
+  height: 48px;
+  font-family: "Karla", monospace;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.siide-scroller-background {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 56px;
+  transform: rotate(-3deg);
+  backdrop-filter: blur(5.3px);
+  background: rgba(255, 255, 255, 0.12);
+  transform-origin: 0;
+  height: 62px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 5;
+  mask: linear-gradient(90deg, transparent, white 3%, white 97%, transparent);
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 3%,
+    white 97%,
+    transparent
+  );
+}
+
+.side-scroller {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  animation: scroll 15s linear infinite;
+
+  p {
+    color: $primary-color;
+    text-wrap: nowrap;
+    font-size: 32px;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0); 
+  }
+  to {
+    transform: translateX(-100%); 
+  }
+
+
+
+
 }

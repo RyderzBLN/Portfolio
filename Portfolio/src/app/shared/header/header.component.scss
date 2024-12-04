@@ -2,7 +2,7 @@
 @import "../../../assets/fonts/fira-code/fira_code.css";
 
 header {
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   color: white;
   font-size: 20px;
   display: flex;
@@ -25,16 +25,12 @@ button {
 ul {
   display: flex;
   gap: 24px;
-
-
 }
 
 li {
-
-
   &:hover {
     cursor: pointer;
-    color: $primary-color
+    color: $primary-color;
   }
 }
 
@@ -79,11 +75,10 @@ li {
 }
 
 .lang-btn:hover {
- color: white;
+  color: white;
 }
 
 .lang-btn.active {
   background-color: $primary-color;
   color: white;
 }
-
