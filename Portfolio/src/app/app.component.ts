@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { HeaderComponent } from "./shared/header/header.component";
+import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
+import { SkillSectionComponent } from "./skill-section/skill-section.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeroSectionComponent, HeaderComponent],
+  imports: [RouterOutlet, HeroSectionComponent, HeaderComponent, AboutMeSectionComponent, SkillSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
