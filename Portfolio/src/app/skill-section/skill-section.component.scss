@@ -1,73 +1,150 @@
 @import "../../styles.scss";
 
-
 section {
-    height: 80dvh;
-    background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, $second-color-30 0%, $first-color 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    padding: 0 96px 144px 96px;
+  height: 80dvh;
+  background: radial-gradient(
+      22.43% 43.85% at 1.22% 52.45%,
+      $second-color-70 0%,
+      $first-color 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  padding: 0 96px 144px 96px;
 }
 
-
-
-h4 {
-    font-size: 24px;
-    font-weight: 700;
+h2 {
+    font-size: 64px;
     color: $primary-color;
-    font-family: "Karla", monospace;
+    font-family: "Fira Code", monospace;
+    font-weight: 700;
+    letter-spacing: -3%;
+}
+
+h3 {
+    font-size: 24px;
+    font-family: "Fira Code", monospace;
+    font-weight: 700;
+    color: white;
+}
+h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: $primary-color;
+  font-family: "Karla", monospace;
 }
 
 span {
-    font-size: 16px;
-    color: white;
-    font-family: "Fira Code", monospace;
-
+  font-size: 16px;
+  color: white;
+  font-family: "Fira Code", monospace;
 }
 
 .main-container {
-    height: 550px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  height: 570px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .skill-container {
-    display: flex;
-    gap: 96px;
+  display: flex;
+  gap: 96px;
 }
 
 .skill-text {
-height: 500px;
-width: 520px;
-background: $primary-10;
-border: 1px solid $primary-color;
-border-radius: 30px;
-}
-
-.skill-show {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    justify-content: start;
-    align-items: center;
-    min-height: 115px;
-    width: 110px;
-    text-align: center;
-    letter-spacing: -3%;
-    border: 1px solid $primary-color;
-}
-
-.skill-icons {
     display: flex;
     flex-direction: column;
     gap: 40px;
+  height: 500px;
+  width: 520px;
+  padding: 32px;
+  background: $primary-10;
+  border: 1px solid $primary-color;
+  border-radius: 30px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 
-height: 100%;
-border: 1px solid $primary-color;
 
+
+}
+
+mark {
+    font-size: 24px;
+    color: $primary-color;
+    font-family: "Fira Code", monospace;
+    font-weight: 700;
+    background: transparent;
+  }
+
+.skill-show {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: start;
+  align-items: center;
+  min-height: 115px;
+  width: 110px;
+  text-align: center;
+  letter-spacing: -3%;
+
+}
+
+.skill-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  height: 100%;
 }
 
 .layout-container {
-    display: flex;
-    gap: 72px;
-
+  display: flex;
+  gap: 72px;
 }
+
+.skill-history {
+display: flex;
+flex-direction: column;
+gap: 32px;
+    >p{
+        font-size: 16px;
+        color: white;
+        font-family: "Karla", monospace;
+        line-height: 22px;
+        text-align: justify;
+    }
+}
+
+.talk-button {
+padding: 13px 24px;
+width: 120px;
+
+border: 1px solid white;
+border-radius: 30px;
+    display: flex;
+justify-content: center;
+    >a {
+        color: white;
+        text-decoration: none;
+        font-family: "Karla", monospace;
+        
+    }
+}
+
+.need-skill {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 340px;
+
+
+    >p{
+        font-size: 16px;
+        color: white;
+        font-family: "Karla", monospace;
+        text-align: justify;
+        line-height: 19px;
+
+    }
+}
+
+
