@@ -1,0 +1,91 @@
+@import "../../styles.scss";
+
+section {
+    height: 70dvh;
+    background-color: $first-color;
+    padding: 0px 464px 16px 96px;
+    
+}
+
+span {
+    font-family: "Karla", monospace;
+    font-weight: 700;
+    color: $primary-color;
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 64px;
+    font-weight: 700;
+    font-family: "Fira Code", monospace;
+    color: $primary-color;
+    margin: 0;
+}
+
+h4 {
+    font-family: "Fira Code", monospace;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 880px;
+    height: 100%;
+    gap: 40px;
+    
+}
+
+.projects-head {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    p {
+        color: white;
+        font-size: 18px;
+        font-family: "Karla", monospace;
+        line-height: 21.5px;
+        text-align: justify;
+    }
+}
+.head {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projects {
+    border-bottom: 1px solid $primary-color;
+    
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 32px;
+    border-top: 1px solid $primary-color;
+
+       
+    p {
+        color: white;
+        font-family: "Karla", monospace;
+        font-size: 18px;
+    }
+}
+
+.used-technologies {
+    display: flex;
+    justify-content: center;
+    height: 22px;
+    align-items: center;
+    gap: 8px;
+}
+
+hr {
+    border: 1px solid $primary-color;
+    height: 100%;
+
+}
