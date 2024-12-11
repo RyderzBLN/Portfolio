@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-projects-section',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './projects-section.component.scss'
 })
 export class ProjectsSectionComponent {
-
+  
 }

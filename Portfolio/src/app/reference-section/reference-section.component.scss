@@ -1,0 +1,28 @@
+@import "../../styles.scss";
+
+section {
+  height: 70dvh;
+  color: $first-color;
+  padding-top: 105px;
+}
+
+h4 {
+  color: $primary-color;
+  font-size: 32px;
+  font-family: "Fira Code", monospace;
+  font-weight: 700;
+}
+
+
+
+.main-ref {
+  position: relative;
+  border: 1px solid $primary-color;
+  display: flex;
+height: 450px;
+  gap: 48px;
+  flex-direction: column;
+
+  text-align: center;
+}
+
