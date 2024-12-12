@@ -4,18 +4,24 @@
 .card {
   color: white;
   position: absolute;
-  width: 525px;
+  width: 625px;
   height: 275px;
-  border: 2px solid rgba(28, 28, 28, 1);
+
   background: rgba(61, 207, 182, 0.3);
+  border: 1px solid $primary-color;
+  isolation: isolate;
+  mix-blend-mode: normal;
   text-align: justify;
   hyphens: auto;
-  word-wrap: break-word; 
+  word-wrap: break-word;
+  backdrop-filter: blur(99px);
+  font-family: "Karla", monospace;
+  line-height: 20px;
 
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
   border-radius: 30px;
   left: 0;
   right: 0;
@@ -28,12 +34,10 @@ font-size: 16px;
   }
 }
 
-
-
 .quotes {
   position: absolute;
-  bottom: -20px;
-  left: -20px;
+  top: -25px;
+  left: -30px;
   z-index: 500;
   display: none;
 }
@@ -53,20 +57,19 @@ font-size: 16px;
   gap: 12px;
 }
 .stretch {
-
   margin-left: 20px;
-width: 250px;
-background-color: white;
-height: 1px;
+  width: 250px;
+  background-color: white;
+  height: 1px;
 }
 
-
 .select {
-  width: 20px;
-  height: 20px;
+  width: 12px;
+  height: 12px;
   border-radius: 999px;
-  
-  background-color: $primary-half
+  border: 1px inset black;
+
+  background-color: $primary-half;
 }
 
 .select:active {
@@ -80,20 +83,49 @@ height: 1px;
 .select-container {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 30px;
   position: absolute;
   bottom: 10px;
   left: 0;
   right: 0;
+
+  svg path {
+    &:hover {
+      fill: $primary-color;
+    }
+  }
 }
 
+.arrow {
+  margin-top: 5px;
+}
+
+.hover-container {
+  &:hover {
+    svg path {
+      fill: $primary-color;
+    }
+  }
+}
+
+.select-input {
+  display: flex;
+  gap: 20px;
+
+  div {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
 
 input[type="radio"] {
-  margin: 0 5px; 
-  background-color:  $primary-color;
+  margin: 0 5px;
+  background-color: $primary-color;
   accent-color: $primary-color;
+  display: none;
 }
-
 
 .cards {
   position: relative;
@@ -106,6 +138,8 @@ input[type="radio"] {
   transform: translatex(-95%) scale(0.85);
   opacity: 0.4;
   z-index: 0;
+  background-color: $primary-10;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 #item-1:checked ~ .cards #ref-2,
@@ -114,8 +148,9 @@ input[type="radio"] {
   transform: translatex(95%) scale(0.85);
   opacity: 0.4;
   z-index: 0;
+  background-color: $primary-10;
+  color: rgba(255, 255, 255, 0.5);
 }
-
 
 #item-1:checked ~ .cards #ref-1 .quotes,
 #item-2:checked ~ .cards #ref-2 .quotes,
@@ -123,5 +158,3 @@ input[type="radio"] {
 #item-4:checked ~ .cards #ref-4 .quotes {
   display: block;
 }
-
-

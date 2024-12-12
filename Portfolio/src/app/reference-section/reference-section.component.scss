@@ -1,9 +1,13 @@
 @import "../../styles.scss";
 
 section {
+overflow: hidden;
   height: 70dvh;
   color: $first-color;
   padding-top: 105px;
+  background: rgb(28,28,28);
+  background: radial-gradient(circle, rgba(28,28,28,1) 92%, $second-color-70 100%);
+
 }
 
 h4 {
@@ -16,8 +20,18 @@ h4 {
 
 
 .main-ref {
+  mask: linear-gradient(90deg, transparent, white 3%, white 97%, transparent);
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 3%,
+    white 97%,
+    transparent
+  );
+
+
   position: relative;
-  border: 1px solid $primary-color;
+
   display: flex;
 height: 450px;
   gap: 48px;

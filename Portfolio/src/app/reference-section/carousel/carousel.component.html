@@ -1,20 +1,48 @@
 <div class="carousel-container">
   <div class="div">
-
-    <input class="btn" type="radio" name="slider" id="item-1" checked />
-    <input class="btn" type="radio" name="slider" id="item-2" />
-    <input class="btn" type="radio" name="slider" id="item-3" />
-
+    <input
+      class="btn"
+      type="radio"
+      name="slider"
+      id="item-1"
+      (change)="checkAndActivate()"
+      id="item-1"
+      checked
+    />
+    <input
+      class="btn"
+      type="radio"
+      name="slider"
+      id="item-1"
+      (change)="checkAndActivate()"
+      id="item-2"
+    />
+    <input
+      class="btn"
+      type="radio"
+      name="slider"
+      id="item-1"
+      (change)="checkAndActivate()"
+      id="item-3"
+    />
 
     <div class="cards">
       <label class="card" for="item-1" id="ref-1">
         <div class="reference">
-          <p> Mit Murat im unserem Team war ich mir sicher,<br> dass unsere Webseite schick und modern aussehen würde. <br>Mit Seiner Aufmerksamkeit fürs Detail, <br> hat Er der Kochwelt diverse optische Verbesserungen <br>wie z.B. gut geplante Fade-Animations <br> und anspruchsvolle Designs-Ideen.<br>
-            In der Hoffnung wieder zusammen arbeiten zu können wünsche ich dir, Murat, ganz viel Erfolg!</p>
-            <div class="member-name">
+          <p>
+            Mit Murat im unserem Team war ich mir sicher,<br />
+            dass unsere Webseite schick und modern aussehen würde. <br />Mit
+            Seiner Aufmerksamkeit fürs Detail, <br />
+            hat Er der Kochwelt diverse optische Verbesserungen <br />wie z.B.
+            gut geplante Fade-Animations <br />
+            und anspruchsvolle Designs-Ideen.<br />
+            In der Hoffnung wieder zusammen arbeiten zu können wünsche ich dir,
+            Murat, ganz viel Erfolg!
+          </p>
+          <div class="member-name">
             <div class="stretch"></div>
-           <p> Marco Lapiello</p>
-            </div>
+            <p>Marco Lapiello</p>
+          </div>
           <svg
             class="quotes"
             width="90"
@@ -31,13 +59,17 @@
         </div>
       </label>
       <label class="card" for="item-2" id="ref-2">
-        
         <div class="reference">
-          <p> Durch Murats Unterstützung in bestimmten Aufgabenbereichen konnte das Team von seinen Beiträgen profitieren. Seine Bereitschaft, sich einzubringen und das Join-Projekt voranzubringen, war für das Team eine wertvolle Ergänzung.</p>
-            <div class="member-name">
+          <p>
+            Durch Murats Unterstützung in bestimmten Aufgabenbereichen konnte
+            das Team von seinen Beiträgen profitieren. Seine Bereitschaft, sich
+            einzubringen und das Join-Projekt voranzubringen, war für das Team
+            eine wertvolle Ergänzung.
+          </p>
+          <div class="member-name">
             <div class="stretch"></div>
-           <p> Christian Zela</p>
-           </div>
+            <p>Christian Zela</p>
+          </div>
           <svg
             class="quotes"
             width="90"
@@ -55,11 +87,15 @@
       </label>
       <label class="card" for="item-3" id="ref-3">
         <div class="reference">
-          <p>Murat war bereit, aktiv an unserem Projekt mitzuarbeiten. Er hat sein Wissen und seine Expertise stets großzügig geteilt und uns bei Unklarheiten geduldig weitergeholfen.</p>
-            <div class="member-name">
+          <p>
+            Murat war bereit, aktiv an unserem Projekt mitzuarbeiten. Er hat
+            sein Wissen und seine Expertise stets großzügig geteilt und uns bei
+            Unklarheiten geduldig weitergeholfen.
+          </p>
+          <div class="member-name">
             <div class="stretch"></div>
-           <p>Tümay Batman</p>
-           </div>
+            <p>Tümay Batman</p>
+          </div>
           <svg
             class="quotes"
             width="90"
@@ -80,7 +116,9 @@
 </div>
 
 <div class="select-container">
-  <div class="select" id="btn-1" (click)="selectItem('item-1', $event)"></div>
-  <div class="select" id="btn-2" (click)="selectItem('item-2', $event)"></div>
-  <div class="select" id="btn-3" (click)="selectItem('item-3', $event)"></div>
+  <div class="select-input">
+    <div class="select" id="btn-1" (click)="selectItem('item-1', $event)"></div>
+    <div class="select" id="btn-2" (click)="selectItem('item-2', $event)"></div>
+    <div class="select" id="btn-3" (click)="selectItem('item-3', $event)"></div>
+  </div>
 </div>
