@@ -1,6 +1,7 @@
 @import "../../styles.scss";
 
 section {
+  position: relative;
   height: 80dvh;
   background: radial-gradient(
       22.43% 43.85% at 1.22% 52.45%,
@@ -9,6 +10,20 @@ section {
     );
     
   padding: 0 96px 144px 96px;
+}
+
+.animation:hover {
+  animation: spinY 1.25s ease-out; /* 2 Sekunden, lineare Drehung */
+}
+
+/* Keyframes für horizontale 3D-Drehung */
+@keyframes spinY {
+  from {
+    transform: rotateY(0deg); /* Startwinkel */
+  }
+  to {
+    transform: rotateY(360deg); /* Endwinkel: 360 Grad */
+  }
 }
 
 h2 {
@@ -155,5 +170,6 @@ justify-content: center;
 
     }
 }
+
 
 

@@ -28,4 +28,8 @@ import { FooterSectionComponent } from "./shared/footer-section/footer-section.c
 })
 export class AppComponent {
   title = 'Portfolio';
+
+
+
+
 }
