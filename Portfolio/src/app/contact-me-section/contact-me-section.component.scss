@@ -1,7 +1,7 @@
 @import "../../styles.scss";
 
 section {
-    height: 100dvh;
+    height: 95dvh;
     padding: 144px 96px;
     background-color: $first-color;
 }
@@ -12,11 +12,17 @@ section {
     width: 1350px;
     min-height: 550px;
     gap: 64px;
-
+    padding: 0 15px;
     display: flex;
 
    
 }
+
+.input-overlay {
+    padding-left: 10px;
+}
+
+
 
 .text {
     color: white;
