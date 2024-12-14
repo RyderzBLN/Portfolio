@@ -1,0 +1,231 @@
+@import "../../styles.scss";
+
+section {
+    height: 100dvh;
+    padding: 144px 96px;
+    background-color: $first-color;
+}
+
+
+.main-contact {
+
+    width: 1350px;
+    min-height: 550px;
+    gap: 64px;
+
+    display: flex;
+
+   
+}
+
+.text {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Karla", monospace;
+}
+
+span {
+    color: $primary-color;
+    font-weight: 700;
+}
+
+h4 {
+    color: $primary-color;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "Karla", monospace;
+
+}
+
+h2 {
+    color: $primary-color;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 64px;
+    font-family: "Fira Code", monospace;
+}
+
+.contact-text {
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+.contact-head {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.contact-description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    
+}
+
+.problem-head {
+    color: $primary-color;
+    font-family: "Fira Code", monospace;
+    font-weight: 700;
+    font-size: 24px;    
+}
+
+.agb-submit {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.form {
+width: 50%;
+display: flex;
+flex-direction: column;
+gap: 40px;
+}
+
+.agb-check-container {
+    display: flex;
+    height: 30px;
+    padding-left: 5px;
+    align-items: center;
+    gap: 12px;
+
+    p {
+        color: white;
+        font-size: 15px;
+        font-family: "Karla", monospace;
+        letter-spacing: 0px;
+    }
+
+    a {
+        text-decoration: none;
+        font-family: "Fira Code", monospace;
+        color: $primary-color;
+        padding: 0px 5px
+
+    }
+}
+
+button {
+    padding: 13px 24px;
+    border-radius: 100px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    background-color: transparent;
+    font-family: "Karla", monospace;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid $primary-color;
+    margin-bottom: 3px;
+    
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+}
+
+textarea {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-family: "Karla", monospace;
+    color: rgba(255, 255, 255, 0.8);
+    min-height: 45px;
+    overflow-y: auto;
+    width: 450px;
+    line-height: 30px;
+    resize: none; 
+
+    &::-webkit-scrollbar {
+        width: 2px; 
+        height: 30px; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary-color; /* Farbe des Scrollbalkens */
+        border-radius: 10px;       /* Abgerundete Ecken des Scrollbalkens */
+      }
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 18px;
+        font-family: "Karla", monospace;
+        letter-spacing: 1px;
+    }
+    
+}
+
+input {
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    outline: none;
+    font-family: "Karla", monospace;
+    padding: 5px;
+
+
+    
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+}
+
+input[list]::-webkit-input-placeholder {
+    background-color: transparent;
+  }
+
+  input[list]:hover {
+    background-color: transparent !important; /* Kein Weiß bei Hover */
+  }
+
+  input[list]::-webkit-input-placeholder {
+    background-color: transparent !important;
+  }
+
+label {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "Fira Code", monospace;
+    color: $primary-color;
+}
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-top: 1px solid $primary-half;
+    height: 130px;
+    padding: 32px 230px 32px 32px;
+
+}
+
+.border-btm {
+    border-bottom: 1px solid $primary-half;
+}
