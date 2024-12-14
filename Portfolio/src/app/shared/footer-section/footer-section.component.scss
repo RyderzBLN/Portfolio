@@ -1,0 +1,77 @@
+@import "../../../styles.scss";
+
+footer {
+    height: 20vh;
+}
+
+.footer-main {
+    display: flex;
+    margin: 78px 96px 64px 96px;
+
+    height: 130px
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.location-description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    p {
+        font-family: "Karla", monospace;
+        color: white;
+        font-size: 16px;
+    }
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: 18px;
+        color: $primary-color;
+        font-family: "Fira Code", monospace;
+
+    }
+}
+
+
+.right {
+    display: flex;
+align-items: flex-end;
+justify-content: center;
+    flex-direction: column;
+
+
+    text-align: left;
+    
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: "Karla", monospace;
+    
+}
+
+.width {
+    width: 33.3333%;
+    height: 100%;
+}
+
