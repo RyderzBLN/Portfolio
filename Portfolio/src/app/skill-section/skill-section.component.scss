@@ -13,7 +13,7 @@ section {
 }
 
 .animation:hover {
-  animation: spinY 1.25s ease-out; /* 2 Sekunden, lineare Drehung */
+  animation: spinY 1.5s ease-out; /* 2 Sekunden, lineare Drehung */
 }
 
 /* Keyframes für horizontale 3D-Drehung */
@@ -22,7 +22,7 @@ section {
     transform: rotateY(0deg); /* Startwinkel */
   }
   to {
-    transform: rotateY(360deg); /* Endwinkel: 360 Grad */
+    transform: rotateY(720deg); /* Endwinkel: 360 Grad */
   }
 }
 
