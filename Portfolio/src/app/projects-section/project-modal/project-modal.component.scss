@@ -1,0 +1,175 @@
+@import "../../../styles.scss";
+/*  START MODAL */
+
+
+
+.modal-background {
+display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 120dvh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.modal {
+  display: flex;
+  gap: 70px;
+  border-radius: 30px;
+
+  width: 85%;
+  border: 1px solid $primary-10;
+  padding: 45px 80px;
+  height: 650px;
+  background: linear-gradient(
+    55.22deg,
+    $first-color 36.26%,
+    $second-color 93.28%
+  );
+
+  a {
+    text-decoration: none;
+    border: 1px solid white;
+    color: white;
+    width: 130px;
+    height: 48px;
+    padding: 13px 24px;
+    border-radius: 100px;
+    font-family: "Karla", monospace;
+  }
+}
+
+.number-head {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    color: $primary-color;
+    font-size: 128px;
+    font-weight: 700;
+    font-family: "Karla", monospace;
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 64px;
+    font-family: "Fira Code", monospace;
+    font-weight: 700;
+    margin-top: -12px;
+    color: white;
+  }
+}
+
+.desc-head {
+  color: $primary-color;
+  font-size: 24px;
+  font-family: "Fira Code", monospace;
+  font-weight: 700;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+}
+
+.desc-text {
+  color: white;
+  font-size: 18px;
+  font-family: "Karla", monospace;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.technlogies-images {
+  height: 24px;
+  margin-top: 32px;
+}
+
+.project-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.used-skill {
+  font-size: 16px;
+  font-family: "Karla", monospace;
+  color: white;
+  gap: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.technlogies-images {
+  display: flex;
+  gap: 16px;
+}
+
+svg path {
+  fill: $primary-color;
+}
+
+.link-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.link-buttons {
+  display: flex;
+  gap: 32px;
+}
+
+.close-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+}
+
+.close-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  margin-right: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.next-btn {
+  background-color: transparent;
+  border: none;
+  color: $primary-color;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-family: "Karla", monospace;
+  cursor: pointer;
+}
+
+.next-project {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
