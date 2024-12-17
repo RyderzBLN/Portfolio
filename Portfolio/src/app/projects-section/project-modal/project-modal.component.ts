@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Output, Input} from '@angular/core';
 
 
 @Component({
@@ -10,8 +10,14 @@ import { Component, Input } from '@angular/core';
   styleUrl: './project-modal.component.scss',
 })
 export class ProjectModalComponent {
-  @Input() opens: boolean = false;
-  @Input() closeModal!: () => void; 
+  @Output() closeEvent = new EventEmitter<void>();
+  @Output() nextEvent = new EventEmitter<void>();
 
+  close() {
+    this.closeEvent.emit();
+  }
 
+  next(){
+    this.nextEvent.emit()
+  }
 }

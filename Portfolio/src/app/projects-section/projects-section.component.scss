@@ -2,8 +2,14 @@
 
 section {
   position: relative;
-  height: 70dvh;
-  background-color: $first-color;
+  height: 90dvh;
+  background: radial-gradient(
+    22.43% 43.85% at 98.78% 52.45%,
+    /* Ursprung auf der rechten Seite (98.78% statt 1.22%) */ $second-color-10
+      0%,
+    /* Zweite Farbe, z.B. $second-color-70 */ $first-color 100%
+      /* Erste Farbe, z.B. $first-color */
+  );
   padding: 0px 464px 16px 96px;
 }
 
@@ -13,6 +19,8 @@ span {
   color: $primary-color;
   font-size: 24px;
 }
+
+
 
 h2 {
   font-size: 64px;
@@ -29,6 +37,56 @@ h4 {
   color: white;
   text-transform: uppercase;
 }
+
+.join-pic {
+  width: 425px;
+  height: 320px;
+  position: absolute;
+  right: 60px;
+  top: 200px;
+
+  display: none;
+  animation: fadeInPic 1s ;
+  transition: 0.18s ease-in-out;
+}
+
+.pollo-pic {
+  width: 425px;
+  height: 320px;
+  position: absolute;
+  right: 60px;
+  top: 270px;
+  display: none; /* Standardmäßig unsichtbar */
+  animation: fadeInPic 1s ;
+  transition: 0.18s ease-in-out;
+}
+
+.join {
+
+  &:hover ~ .join-pic {
+    display: block;
+  } 
+}
+
+.pollo {
+
+  &:hover ~ .pollo-pic {
+    display: block;
+  }
+}
+
+@keyframes fadeInPic {
+  0% {
+opacity: 0;
+scale: 0.3;
+
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 
 .wrapper {
   display: flex;
@@ -71,7 +129,17 @@ h4 {
     font-family: "Karla", monospace;
     font-size: 18px;
   }
+
+  &:hover {
+    background-color: $primary-30;
+    cursor: pointer;
+  }
+
+  transition: 0.18s ease-in-out;
 }
+
+
+
 
 .used-technologies {
   display: flex;
@@ -85,5 +153,3 @@ hr {
   border: 1px solid $primary-color;
   height: 100%;
 }
-
-

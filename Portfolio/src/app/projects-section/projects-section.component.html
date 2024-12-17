@@ -14,7 +14,7 @@
      
 
 
-      <div (click)="openModal()" class="project">
+      <div (click)="openModal(0)" class="project join">
         <h4>Join</h4>
         <div class="used-technologies">
           <p>HTML</p>
@@ -25,8 +25,11 @@
           <hr />
           <p>Firebase</p>
         </div>
+        
+
       </div>
-      <div  class="project">
+      <img class="join-pic" src="../../assets/img/join.png">
+      <div (click)="openModal(1)" class="project pollo">
         <h4>El Pollo Loco</h4>
         <div class="used-technologies">
           <p>HTML</p>
@@ -35,10 +38,22 @@
           <hr />
           <p>Javascript</p>
         </div>
+        
       </div>
+
+      <img class="pollo-pic" src="../../assets/img/pollo.png">
     </div>
+    
   </div>
 
 
-  <app-project-modal *ngIf="opens" [opens]="opens" [closeModal]="closeModal"></app-project-modal>
+
+
+
+ @if(opens && modalIndex == 0){
+  <app-project-modal (closeEvent)="closeModal()" (nextEvent)="nextProject()" ></app-project-modal>
+ } @else if(opens && modalIndex == 1){
+  <app-modal-pollo (closeEvent)="closeModal()" (nextEvent)="nextProject()" ></app-modal-pollo>
+ }
+
 </section>

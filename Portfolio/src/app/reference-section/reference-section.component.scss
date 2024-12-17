@@ -1,14 +1,14 @@
 @import "../../styles.scss";
 
 section {
-  border-top: 1px solid $primary-10;
-  border-bottom: 1px solid $primary-10;
+
+
 overflow: hidden;
-  height: 70dvh;
+  height: 65dvh;
   color: $first-color;
   padding-top: 105px;
-  background: rgb(28,28,28);
-  background: radial-gradient(circle, rgba(28,28,28,1) 92%, $second-color-70 100%);
+  background: $first-color
+
 
 }
 
@@ -19,6 +19,7 @@ h4 {
   font-size: 32px;
   font-family: "Fira Code", monospace;
   font-weight: 700;
+  margin-bottom: 24px;
 }
 
 

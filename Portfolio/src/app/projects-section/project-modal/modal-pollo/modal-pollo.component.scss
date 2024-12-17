@@ -1,10 +1,7 @@
-@import "../../../styles.scss";
+@import "../../../../styles.scss";
 /*  START MODAL */
 
 
-body {
-  overflow: hidden;
-}
 
 .modal-background {
 display: flex;
@@ -18,7 +15,6 @@ display: flex;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
 
@@ -47,6 +43,10 @@ display: flex;
     padding: 13px 24px;
     border-radius: 100px;
     font-family: "Karla", monospace;
+  }
+
+  &:hover {
+    background-color: $primary-10;
   }
 
   animation: fadeIn 0.25s forwards;
@@ -181,14 +181,15 @@ svg path {
   width: 100%;
 }
 
+
 @keyframes fadeIn {
 
-0% {
-  scale: 0.0;
-  opacity: 0;
-}
-  100% {
-    opacity: 1; /* Endopacity */
-    scale: 1;
-  }
-}
+    0% {
+      scale: 0.0;
+      opacity: 0;
+    }
+      100% {
+        opacity: 1; /* Endopacity */
+        scale: 1;
+      }
+    }
