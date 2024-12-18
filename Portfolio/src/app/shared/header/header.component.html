@@ -1,15 +1,20 @@
 <header>
   <div class="left-container">
     <div class="language-toggle">
-      <button class="lang-btn" [class.active]="isDE" (click)="toggleLanguage()">
+      <button class="lang-btn" [class.active]="globalService.isDE" (click)="toggleLanguage()">
         DE
       </button>
-      <button class="lang-btn" [class.active]="!isDE" (click)="toggleLanguage()">
+      <button class="lang-btn" [class.active]="!globalService.isDE" (click)="toggleLanguage()">
         EN
       </button>
     </div>
     <ul>
-      <li>About me</li>
+        @if(globalService.isDE) {
+            <li>Über Mich</li>
+        } @else {
+            <li>About me</li>
+        }
+
       <li>Skills</li>
       <li>Projects</li>
     </ul>

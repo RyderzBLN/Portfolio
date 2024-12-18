@@ -14,8 +14,9 @@ import { FooterSectionComponent } from "./shared/footer-section/footer-section.c
   standalone: true,
   imports: [
     RouterOutlet,
-    HeroSectionComponent,
     HeaderComponent,
+    HeroSectionComponent,
+
     AboutMeSectionComponent,
     SkillSectionComponent,
     ProjectsSectionComponent,
@@ -29,6 +30,12 @@ import { FooterSectionComponent } from "./shared/footer-section/footer-section.c
 export class AppComponent {
   title = 'Portfolio';
 
+  isDE: boolean = true; // Initialer Wert für isDE
+
+  // Funktion, die den Wert von isDE aktualisiert
+  updateLanguage(isDE: boolean) {
+    this.isDE = isDE;
+  }
 
 
 

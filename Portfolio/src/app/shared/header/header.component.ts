@@ -1,5 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+import { GlobalService } from '../global.service';
+
+
 
 @Component({
   selector: 'app-header',
@@ -10,11 +13,11 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
+  constructor(public globalService: GlobalService) {}
 
-
-  isDE: boolean = true; // Standardmäßig Deutsch aktiv
-
+  // Funktion, um die Sprache umzuschalten
   toggleLanguage() {
-    this.isDE = !this.isDE; // Einfacher Wechsel zwischen true und false
+    this.globalService.isDE = !this.globalService.isDE;
+    // Emitte den neuen Wert an die AppComponent
   }
 }
