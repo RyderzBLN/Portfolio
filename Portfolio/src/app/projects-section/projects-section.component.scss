@@ -2,7 +2,7 @@
 
 section {
   position: relative;
-  height: 90dvh;
+  height: 70dvh;
   background: radial-gradient(
     22.43% 43.85% at 98.78% 52.45%,
     /* Ursprung auf der rechten Seite (98.78% statt 1.22%) */ $second-color-10
@@ -47,7 +47,7 @@ h4 {
 
   display: none;
   animation: fadeInPic 1s ;
-  transition: 0.18s ease-in-out;
+  transition: 0.12s ease-in-out;
 }
 
 .pollo-pic {
@@ -58,7 +58,7 @@ h4 {
   top: 270px;
   display: none; /* Standardmäßig unsichtbar */
   animation: fadeInPic 1s ;
-  transition: 0.18s ease-in-out;
+  transition: 0.05s ease-in-out;
 }
 
 .join {
@@ -78,7 +78,7 @@ h4 {
 @keyframes fadeInPic {
   0% {
 opacity: 0;
-scale: 0.3;
+scale: 0.75;
 
   }
   100% {
@@ -135,7 +135,7 @@ scale: 0.3;
     cursor: pointer;
   }
 
-  transition: 0.18s ease-in-out;
+
 }
 
 

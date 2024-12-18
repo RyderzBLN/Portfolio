@@ -22,14 +22,15 @@ section {
   }
   50% {
     transform: rotateY(30deg);
+    
   }
   70% {
     transform: rotateY(15deg);
-    scale: 1.25;
+
   }
   100% {
     transform: rotateY(360deg);
-    opacity: 0.7;
+scale: 1.15;
   }
 }
 
