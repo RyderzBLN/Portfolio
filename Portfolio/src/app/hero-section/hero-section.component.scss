@@ -35,7 +35,7 @@ section {
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
     line-height: 0.7em;
     outline: none;
-    animation: animate 5.02s linear infinite;
+    animation: animate 5.01s linear infinite;
   }
 }
 
@@ -45,12 +45,14 @@ section {
     text-shadow: none;
   }
   100% {
+    letter-spacing: 1px;
     color: rgba(61, 255, 210, 1); /* Leuchtendere Farbe */
     text-shadow: 0 0 10px rgba(61, 255, 210, 1),
                  0 0 20px rgba(61, 255, 210, 1),
                  0 0 40px rgba(61, 255, 210, 1),
                  0 0 80px rgba(61, 255, 210, 1),
-                 0 0 140px rgba(61, 255, 210, 1),
+                 0 0 140px rgba(61, 255, 210, 1)
+                
 
                   /* Leuchtender Textschatten */
   }
