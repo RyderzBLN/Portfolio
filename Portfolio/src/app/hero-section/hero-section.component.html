@@ -6,43 +6,84 @@
 
     <h1>Murat Catili</h1>
     <div class="banner-container">
-      <div class="banner"><p>Check my Work</p></div>
-      <div class="banner"><p>Contact me</p></div>
+      <div class="banner">
+        @if(globalService.isDE){
+          <p>Meine Projekte</p>
+        } @else { 
+          <p>Check my Work</p>
+        }
+        
+      </div>
+      <div class="banner">
+        @if(globalService.isDE){
+          <p>Kontakt</p>
+        } @else { 
+          <p>Contact me</p>
+        }
+        </div>
     </div>
   </div>
 
   <div class="siide-scroller-background">
     <div class="side-scroller">
-      <p>Available for remote work</p>
-      <p>-</p>
-      <p>Frontend Developer</p>
-      <p>-</p>
-      
-      <p>Based in Berlin</p>
-      <p>-</p>
-      <p>Open to work</p>
-      <p>-</p>
+      @if(globalService.isDE){
+        <p>Verfügbar für Homeoffice</p>
+      } @else { 
+        <p>Available for remote work</p>
+      }
+
+      <p>★</p>
+      @if(globalService.isDE){
+        <p>Frontend Entwickler</p>
+      } @else { 
+        <p>Frontend Developer</p>
+      }
+      <p>★</p>
+      @if(globalService.isDE){
+        <p>Standort Berlin</p>
+      } @else { 
+        <p>Based in Berlin</p>
+      }
+      <p>★</p>
+      @if(globalService.isDE){
+        <p>Offen für Jobangebote</p>
+      } @else { 
+        <p>Open to work</p>
+      }
+      <p>★</p>
     </div>
     <div class="side-scroller">
-      <p>Available for remote work</p>
-      <p>-</p>
-      <p>Frontend Developer</p>
-      <p>-</p>
-      <p>Based in Berlin</p>
-      <p>-</p>
-      <p>Open to work</p>
-      <p>-</p>
+      @if(globalService.isDE){
+        <p>Verfügbar für Homeoffice</p>
+      } @else { 
+        <p>Available for remote work</p>
+      }
+
+      <p>★</p>
+      @if(globalService.isDE){
+        <p>Frontend Entwickler</p>
+      } @else { 
+        <p>Frontend Developer</p>
+      }
+      <p>★</p>
+      @if(globalService.isDE){
+        <p>Standort Berlin</p>
+      } @else { 
+        <p>Based in Berlin</p>
+      }
+      <p>★</p>
+      @if(globalService.isDE){
+        <p>Offen für Jobangebote</p>
+      } @else { 
+        <p>Open to work</p>
+      }
+      <p>★</p>
     </div>
-    <div class="side-scroller">
-      <p>Available for remote work</p>
-      <p>-</p>
-      <p>Frontend Developer</p>
-      <p>-</p>
-      <p>Based in Berlin</p>
-      <p>-</p>
-      <p>Open to work</p>
-      <p>-</p>
-    </div>
+
+
+
+
+
   </div>
 
   <div class="wrapper">

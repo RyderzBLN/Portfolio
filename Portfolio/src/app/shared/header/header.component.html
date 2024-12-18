@@ -16,7 +16,13 @@
         }
 
       <li>Skills</li>
-      <li>Projects</li>
+
+      @if(globalService.isDE) {
+          <li>Projekte</li>
+      } @else {
+          <li>Projects</li>
+      }
+
     </ul>
   </div>
   <div class="right-contaner">

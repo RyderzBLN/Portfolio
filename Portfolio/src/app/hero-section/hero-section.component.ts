@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
+import { GlobalService } from '../shared/global.service';
 
 
 @Component({
@@ -11,8 +12,7 @@ import { HeaderComponent } from '../shared/header/header.component';
 })
 
 export class HeroSectionComponent {
-
-
+  constructor(public globalService: GlobalService) {}
 
 }
 

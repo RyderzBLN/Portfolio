@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GlobalService } from '../shared/global.service';
 
 @Component({
   selector: 'app-about-me-section',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './about-me-section.component.scss'
 })
 export class AboutMeSectionComponent {
-
+  constructor(public globalService: GlobalService) {}
 }
