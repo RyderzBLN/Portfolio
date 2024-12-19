@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { GlobalService } from '../../shared/global.service';
 @Component({
   selector: 'app-carousel',
   standalone: true,
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent {
-  
+  constructor(public globalService: GlobalService) {}
   selectItem(itemId: string, event: Event): void {
     const item = document.getElementById(itemId) as HTMLInputElement;
     if (item) {

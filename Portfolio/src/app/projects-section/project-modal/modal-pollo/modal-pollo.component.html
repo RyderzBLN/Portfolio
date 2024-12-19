@@ -6,11 +6,22 @@
         <h4>EL POLLO LOCO</h4>
       </div>
       <div class="description">
-        <p class="desc-head">What is this project about?</p>
+        <p class="desc-head">@if(globalService.isDE){
+          Worum geht es bei diesem Projekt?
+        } @else {
+          What is this project about?
+        }
+          </p>
 
         <p class="desc-text">
+          @if(globalService.isDE){ 
+            Ein Jump-and-Run-Spiel basierend auf einem   objektorientierten <br>Ansatz.
+             Hilf Pepe, Münzen und Tabasco-Salsa zu finden,
+             um gegen das verrückte Huhn zu kämpfen.
+          } @else {
+
           Jump, run and throw game based on object-oriented approach. Help Pepe
-          to find coins and tabasco salsa to fight<br> against the crazy hen.
+          to find coins and tabasco salsa to fight<br> against the crazy hen. }
         </p>
 
         <div class="technlogies-images">
@@ -103,7 +114,11 @@
         <img src="../../../../assets/img/pollo.png" />
         <div class="next-project">
           <button (click)="next()" class="next-btn">
-            Next project
+            @if(globalService.isDE){ 
+              Nächstes Projekt
+            } @else {
+              Next project }
+
             <svg
               width="19"
               height="20"

@@ -2,53 +2,87 @@
   <div class="main-contact">
     <div class="contact-text">
       <div class="contact-head">
-        <h4>Contact me</h4>
+        <h4>
+          @if(globalService.isDE){ Kontaktiere mich } @else {
+          Contact me } </h4>
         <h2>
+
+          @if(globalService.isDE){ Worauf <br> wartest du? } @else {
           Let's work <br />
-          together
+          together }
         </h2>
       </div>
       <div class="contact-description">
         <div class="problem-head">
-          <p>Got a problem to solve?</p>
+          <p>
+            @if(globalService.isDE){ Etwas, bei dem ich helfen kann? } @else {
+            Got a problem to solve? }</p>
         </div>
 
         <p class="text">
+          @if(globalService.isDE){ 
+            Über das Formular kannst du dich bei mir melden.
+           Ich freue mich darauf, <br> dich bei der Umsetzung deiner Vision zu unterstützen.
+          } @else {
           Contact me through this form, I am interested in hearing from you,
           knowing <br> your ideas and contributing to your projects with my work.
+          }
         </p>
 
-        <p class="text">Need a Frontend developer? <span>Let’s talk!</span></p>
+        <p class="text"> 
+          @if(globalService.isDE){ 
+            Du brauchst einen Frontend-Entwickler? <span> Jetzt Anfragen! </span>
+          } @else {
+          Need a Frontend developer? <span>Let’s talk!</span> }
+        </p>
       </div>
     </div>
     <div class="form">
       <div class="input-overlay">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
           <div class="input-container">
-            <label for="name">What's your name?</label>
-            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" autocomplete="off" id="name" name="name" placeholder="Your name goes here" required minlength="3"/>
+            <label for="name">
+              @if(globalService.isDE){ Wie ist dein Name? } @else { What's your name? }</label>
+           
+            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" autocomplete="off" id="name" name="name" placeholder="Name" required minlength="3"/>
             @if (!name.valid && name.touched && !name.disabled) {
-              <p class="error">Name must be at least 3 characters long.</p>
+
+              <p class="error">
+                @if(globalService.isDE){ Name muss mindestens 3 Zeichen lang sein. } @else { Name must be at least 3 characters long. }</p>
+                
             }
           </div>
           <div class="input-container">
-            <label for="mail">What's your email?</label>
-            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" autocomplete="off" id="mail" name="mail" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
+            <label for="mail">
+              @if(globalService.isDE){E-Mail Adresse? } @else {
+              What's your email?
+              }</label>
+            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" autocomplete="off" id="mail" name="mail" placeholder="E-mail@adress.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
             @if (!email.valid && email.touched && !email.disabled) {
-              <p class="error">Please enter a valid email address</p>
+              <p class="error">
+                @if(globalService.isDE){ Bitte geben Sie eine gültige E-Mail-Adresse ein. } @else { Please enter a valid email address }</p>
+                
             }
           </div>
           <div class="input-container border-btm">
-            <label for="message">How can I help you?</label>
-            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Hello Lukas, I am interested in..." required minlength="15"></textarea>
+            <label for="message">
+              @if(globalService.isDE)
+              { Wie kann ich dir helfen? }
+               @else { How can I help you? }</label>
+             
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Text..." required minlength="15"></textarea>
             @if (!message.valid && message.touched && !message.disabled) {
-              <p class="error-message">Message must be at least 15 characters long.</p>
+              <p class="error-message"> @if(globalService.isDE){ Nachricht muss mindestens 15 Zeichen lang sein. } @else { Message must be at least 15 characters long. }</p>
+                
             }
           </div>
           <div class="agb-submit">
             <div class="agb-check-container">
               <div class="checkbox"></div>
-              <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</p>
+              <p>
+                @if(globalService.isDE)
+                { Ich habe die <a href="#"><strong>Datenschutzerklärung</strong></a> gelesen und <strong>Aktzeptiere</strong> sie.} @else {
+                I've read the <a href="#"><strong>Privacy policy</strong></a> and agree to the processing of my data as outlined. }</p>
             </div>
             <div class="submit-container">
               <input class="button" type="submit" />

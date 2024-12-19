@@ -6,12 +6,20 @@
         <h4>Join</h4>
       </div>
       <div class="description">
-        <p class="desc-head">What is this project about?</p>
+        <p class="desc-head">
+          @if(globalService.isDE){ Worum geht es bei diesem Projekt? } @else {
+          What is this project about? }
+        </p>
 
         <p class="desc-text">
-          Task manager inspired by the Kanban System. Create and organize tasks
-          using drag and drop functions, assign <br />
-          users and categories.
+          @if(globalService.isDE){ Ein Aufgabenmanager inspiriert vom
+          Kanban-System. <br> Erstelle und organisiere Aufgaben mit
+          Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu. }
+          @else { 
+          Task
+          manager inspired by the Kanban System. Create and organize tasks using
+          drag and drop functions, assign <br />
+          users and categories. }
         </p>
 
         <div class="technlogies-images">
@@ -119,7 +127,11 @@
         <img src="../../assets/img/join.png" />
         <div class="next-project">
           <button (click)="next()" class="next-btn">
-            Next project
+            @if(globalService.isDE){ 
+              Nächstes Projekt
+            } @else {
+              Next project }
+           
             <svg
               width="19"
               height="20"

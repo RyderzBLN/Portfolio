@@ -3,12 +3,23 @@
     <div class="projects-head">
       <div class="head">
         <span>Portfolio</span>
-        <h2>Featured Projects</h2>
+        @if(globalService.isDE){
+          <h2>Projekt-Highlights</h2>
+        } @else {
+          <h2>Featured Projects</h2>
+        }
+       
       </div>
-      <p>
-        Explore a selection of my work here - Interact with <br />projects to
-        see my skills in action.
-      </p>
+      @if(globalService.isDE){
+        <p>
+          Entdecke hier eine Auswahl meiner Projekte <br> Erlebe meine Fähigkeiten direkt in Aktion.
+        </p>
+      } @else {
+        <p>
+          Explore a selection of my work here - Interact with <br />projects to
+          see my skills in action.
+        </p>
+      }
     </div>
     <div class="projects">
      

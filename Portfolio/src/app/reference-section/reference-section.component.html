@@ -1,6 +1,10 @@
 <section>
   <div class="main-ref">
-    <h4>What my colleagues say about me</h4>
+    <h4>
+      @if(globalService.isDE){ 
+        Das sagen Kollegen über mich 
+      } @else { 
+      What my colleagues say about me }</h4>
     <app-carousel></app-carousel>
   </div>
 

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-
+import { GlobalService } from '../shared/global.service';
 @Component({
   selector: 'app-contact-me-section',
   standalone: true,
@@ -10,7 +10,9 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact-me-section.component.scss'
 })
 export class ContactMeSectionComponent {
+  constructor(public globalService: GlobalService) {}
 
+  
 contactData = {
   name: '',
   email: '',

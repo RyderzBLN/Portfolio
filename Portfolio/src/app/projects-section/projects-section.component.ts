@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProjectModalComponent } from './project-modal/project-modal.component';
 import { CommonModule } from '@angular/common';
 import { ModalPolloComponent } from './project-modal/modal-pollo/modal-pollo.component';
+import { GlobalService } from '../shared/global.service';
 
 @Component({
   selector: 'app-projects-section',
@@ -15,6 +16,7 @@ import { ModalPolloComponent } from './project-modal/modal-pollo/modal-pollo.com
   ],
 })
 export class ProjectsSectionComponent {
+  constructor(public globalService: GlobalService) {}
   opens = false;
   modalIndex: number = 0;
 

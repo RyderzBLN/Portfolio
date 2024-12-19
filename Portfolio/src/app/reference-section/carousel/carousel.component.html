@@ -30,14 +30,22 @@
       <label class="card" for="item-1" id="ref-1">
         <div class="reference">
           <p>
-            Mit Murat im unserem Team war ich mir sicher,<br />
-            dass unsere Webseite schick und modern aussehen würde. <br />Mit
-            Seiner Aufmerksamkeit fürs Detail, <br />
-            hat Er der Kochwelt diverse optische Verbesserungen <br />wie z.B.
-            gut geplante Fade-Animations <br />
-            und anspruchsvolle Designs-Ideen.<br />
-            In der Hoffnung wieder zusammen arbeiten zu können wünsche ich dir,
-            Murat, ganz viel Erfolg!
+            @if(globalService.isDE){ Mit Murat im unserem Team war ich mir
+            sicher,
+            dass unsere Webseite schick und modern aussehen würde. Mit
+            Seiner Aufmerksamkeit fürs Detail, 
+            hat Er der Kochwelt diverse optische Verbesserungen wie z.B.
+            gut geplante Fade-Animations 
+            und anspruchsvolle Designs-Ideen.
+            In der Hoffnung wieder zusammen arbeiten zu können wünsche  ich dir, <br>
+            Murat, ganz viel Erfolg! } 
+            @else 
+            { With Murat on our team, I was
+            confident that our website would look sleek and modern. With his
+            attention to detail, he brought various visual enhancements to the
+            culinary world, such as well-planned fade animations and
+            sophisticated design ideas. I hope we get the chance to work
+            together again and wish you, Murat, great success! }
           </p>
           <div class="member-name">
             <div class="stretch"></div>
@@ -60,11 +68,18 @@
       </label>
       <label class="card" for="item-2" id="ref-2">
         <div class="reference">
-          <p>
+          <p>@if(globalService.isDE){ 
             Durch Murats Unterstützung in bestimmten Aufgabenbereichen konnte
             das Team von seinen Beiträgen profitieren. Seine Bereitschaft, sich
             einzubringen und das Join-Projekt voranzubringen, war für das Team
             eine wertvolle Ergänzung.
+          }
+          @else {
+            With Murat's support in certain areas of responsibility, the team
+            was able to benefit from his contributions. His willingness to
+            engage and drive the Join project forward was a valuable addition
+            to the team.
+          }
           </p>
           <div class="member-name">
             <div class="stretch"></div>
@@ -88,9 +103,16 @@
       <label class="card" for="item-3" id="ref-3">
         <div class="reference">
           <p>
-            Murat war bereit, aktiv an unserem Projekt mitzuarbeiten. Er hat
+            @if(globalService.isDE){ 
+              Murat war bereit, aktiv an unserem Projekt mitzuarbeiten. Er hat
             sein Wissen und seine Expertise stets großzügig geteilt und uns bei
             Unklarheiten geduldig weitergeholfen.
+            } @else {
+              Murat was willing to actively contribute to our project. 
+              He consistently shared his knowledge and expertise 
+              generously and patiently helped us with any uncertainties.
+            }
+            
           </p>
           <div class="member-name">
             <div class="stretch"></div>
@@ -117,7 +139,7 @@
 
 <div class="select-container">
   <div class="select-input">
-    <div class="select" id="btn-1" (click)="selectItem('item-1', $event)"></div>
+    <div class="select active" id="btn-1" (click)="selectItem('item-1', $event)"></div>
     <div class="select" id="btn-2" (click)="selectItem('item-2', $event)"></div>
     <div class="select" id="btn-3" (click)="selectItem('item-3', $event)"></div>
   </div>

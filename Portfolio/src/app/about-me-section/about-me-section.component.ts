@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { GlobalService } from '../shared/global.service';
 
 @Component({
@@ -10,4 +10,25 @@ import { GlobalService } from '../shared/global.service';
 })
 export class AboutMeSectionComponent {
   constructor(public globalService: GlobalService) {}
+
+   @ViewChild('targetElement', { static: true }) targetElement!: ElementRef;
+    isVisible = false;
+  
+    ngOnInit(): void {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              this.isVisible = true; 
+            } else {
+              this.isVisible = false; 
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+  
+  
+      observer.observe(this.targetElement.nativeElement);
+    }
 }

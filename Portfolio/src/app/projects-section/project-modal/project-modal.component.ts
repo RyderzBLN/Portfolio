@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Output, Input} from '@angular/core';
-
+import { Component, EventEmitter, Output} from '@angular/core';
+import { GlobalService } from '../../shared/global.service';
 
 @Component({
   selector: 'app-project-modal',
@@ -10,6 +10,9 @@ import { Component, EventEmitter, Output, Input} from '@angular/core';
   styleUrl: './project-modal.component.scss',
 })
 export class ProjectModalComponent {
+  constructor(public globalService: GlobalService) {}
+
+
   @Output() closeEvent = new EventEmitter<void>();
   @Output() nextEvent = new EventEmitter<void>();
 

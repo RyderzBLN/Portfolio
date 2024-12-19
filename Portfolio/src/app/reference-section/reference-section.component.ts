@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CarouselComponent } from './carousel/carousel.component';
+import { GlobalService } from '../shared/global.service';
 
 @Component({
   selector: 'app-reference-section',
@@ -9,5 +10,5 @@ import { CarouselComponent } from './carousel/carousel.component';
   styleUrl: './reference-section.component.scss'
 })
 export class ReferenceSectionComponent {
-
+  constructor(public globalService: GlobalService) {}
 }

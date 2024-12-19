@@ -9,7 +9,7 @@ import { GlobalService } from '../shared/global.service';
   styleUrl: './skill-section.component.scss'
 })
 export class SkillSectionComponent {
-  
+
   constructor(public globalService: GlobalService) {}
 
   @ViewChild('targetElement', { static: true }) targetElement!: ElementRef;
@@ -20,16 +20,16 @@ export class SkillSectionComponent {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            this.isVisible = true; // Animation starten
+            this.isVisible = true; 
           } else {
-            this.isVisible = false; // Animation entfernen (optional)
+            this.isVisible = false; 
           }
         });
       },
-      { threshold: 0.1 } // Aktivieren, wenn 10% sichtbar sind
+      { threshold: 0.1 }
     );
 
-    // Ziel-Element beobachten
+
     observer.observe(this.targetElement.nativeElement);
   }
 }

@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { GlobalService } from '../../../shared/global.service';
 
 @Component({
   selector: 'app-modal-pollo',
@@ -8,6 +9,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrl: './modal-pollo.component.scss'
 })
 export class ModalPolloComponent {
+  constructor(public globalService: GlobalService) {}
+
   @Output() closeEvent = new EventEmitter<void>();
   @Output() nextEvent = new EventEmitter<void>();
 
