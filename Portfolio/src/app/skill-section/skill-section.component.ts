@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { GlobalService } from '../shared/global.service';
 
 @Component({
   selector: 'app-skill-section',
@@ -8,6 +9,9 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   styleUrl: './skill-section.component.scss'
 })
 export class SkillSectionComponent {
+  
+  constructor(public globalService: GlobalService) {}
+
   @ViewChild('targetElement', { static: true }) targetElement!: ElementRef;
   isVisible = false;
 
