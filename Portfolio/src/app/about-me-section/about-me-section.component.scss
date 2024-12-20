@@ -76,24 +76,28 @@ gap: 130px;
 0% {
   transform: rotateY(-260deg);
   color: transparent;
-  
+
 }
 
 
 
 
 49% {
-  scale: 1.05;
+  scale: 1.03;
   color: transparent;
+
 
 };
 
 50% {
-  color: $primary-10;
+  color: $primary-10; 
+
 }
 
 75% {
   scale: 1;
+
+
 }
 
 
@@ -103,8 +107,10 @@ gap: 130px;
 
 
 100% {
-  transform: rotateY(0deg);
+  transform: none;
   background-color: $primary-10;
+
+
 }
 }
 
@@ -113,6 +119,7 @@ gap: 130px;
   flex-direction: column;
   justify-content: center;
   gap: 40px;
+
 
   > p {
     font-family: "Karla", monospace;

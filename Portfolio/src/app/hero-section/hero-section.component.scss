@@ -132,23 +132,66 @@ section {
   );
 }
 
-.abs {
-  position: absolute;
+.mail-link {
+
   font-family: "Karla", monospace;
-  rotate: 270deg;
-  right: 27px;
+
+
   letter-spacing: 1px;
-  bottom: 50%;
+
   text-transform: uppercase;
   font-size: 20px;
   color: white;
   text-decoration: none;
+  transition: 0.15s ease-in-out;
 
   &:hover {
     cursor: pointer;
     color: $primary-color;
+
   }
 }
+
+
+
+.mail {
+position: absolute;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  width: 250px;
+  height: 55px;
+  transform: rotate(270deg);
+}
+
+.stretchs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 235px;
+  height: 3px;
+}
+
+.line {
+
+
+  width: 550px;
+  height: 1px;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.svg-icon-wrapper {
+  display: flex;
+
+  gap: 12px;
+}
+
+.rotate-icon {
+  transform: rotate(-270deg);
+}
+
 
 .side-scroller {
   user-select: none;
@@ -203,7 +246,6 @@ section {
 .stretch {
   position: absolute;
   bottom: 0;
-
   width: 2px;
 }
 

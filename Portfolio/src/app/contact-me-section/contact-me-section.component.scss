@@ -125,6 +125,7 @@ gap: 40px;
 .error {
     color: rgb(208, 49, 49);
     margin-top: -15px;
+    white-space: nowrap;
     font-size: 14px;
     font-family: "Fira Code", monospace;
 }
@@ -132,6 +133,7 @@ gap: 40px;
 .error-message {
     color: rgb(208, 49, 49);
     margin-top: -30px;
+    white-space: nowrap;
     font-size: 14px;
     font-family: "Fira Code", monospace;
 }
@@ -170,9 +172,9 @@ textarea {
     font-size: 18px;
     font-family: "Karla", monospace;
     color: rgba(255, 255, 255, 0.8);
-    min-height: 45px;
+    min-height: 50px;
     overflow-y: auto;
-    width: 450px;
+    width: 575px;
     line-height: 30px;
     resize: none; 
 
@@ -191,6 +193,10 @@ textarea {
         font-size: 18px;
         font-family: "Karla", monospace;
         letter-spacing: 1px;
+    }
+
+    &:focus {
+        border: 2px solid $primary-color;
     }
     
 }

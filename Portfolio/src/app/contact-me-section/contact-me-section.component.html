@@ -70,7 +70,7 @@
               { Wie kann ich dir helfen? }
                @else { How can I help you? }</label>
              
-            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Text..." required minlength="15"></textarea>
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Text . . ." required minlength="15"></textarea>
             @if (!message.valid && message.touched && !message.disabled) {
               <p class="error-message"> @if(globalService.isDE){ Nachricht muss mindestens 15 Zeichen lang sein. } @else { Message must be at least 15 characters long. }</p>
                 
