@@ -27,6 +27,11 @@ section {
   @media (max-width: 350px) {
     height: 155dvh;
   }
+
+  @media (min-width: 600px) and (max-width: 1050px) {
+    height: 150dvh;
+    display: block;
+  }
 }
 
 h2 {
@@ -158,6 +163,12 @@ h2 {
       font-size: 60px;
     }
   }
+  @media (min-width: 600px) and (max-width: 1050px) {
+    width: 100%;
+    align-items: center;
+  }
+
+ 
 }
 
 .about-text-container {
@@ -199,13 +210,21 @@ h2 {
   }
 
   @media (max-width: 650px) {
-   gap: 22px;
+
    gap: 30px;
+   
   }
 
   @media (max-width: 350px) {
     padding: 16px;
     gap: 40px;
+  }
+
+  @media (min-width: 600px) and (max-width: 1050px) {
+   max-width: unset;
+   width: 85%;
+
+
   }
   
 

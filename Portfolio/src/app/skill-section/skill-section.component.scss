@@ -10,6 +10,28 @@ section {
   );
 
   padding: 0 96px 144px 96px;
+  @media (max-width: 1650px) {
+    padding: 0 52px 144px 52px;
+    
+  }
+  
+  @media (max-width: 1150px) {
+    gap: 52px;
+    padding: 0 32px 102px 32px;
+  }
+  @media (max-width: 450px) {
+    padding: 0 12px 102px 12px;
+     
+   }
+
+   @media (max-width: 450px) {
+
+     height: 1220px
+   }
+   @media (max-width: 450px) and (max-height: 780px) {
+
+    height: 1450px
+  }
 }
 
 
@@ -81,6 +103,10 @@ h2 {
   font-family: "Fira Code", monospace;
   font-weight: 700;
   letter-spacing: -3%;
+  @media (max-width: 450px) {
+    font-size: 52px;
+     
+   }
 }
 
 .g-myskills-head {
@@ -118,6 +144,26 @@ span {
 .skill-container {
   display: flex;
   gap: 96px;
+  @media(max-width: 1650px) {
+   gap: 72px;
+  }
+  @media (max-width: 1350px) {
+    gap: 96px;
+    
+  }
+  @media (max-width: 1110px) {
+    gap: 85px;
+    
+  }
+
+  @media (max-width: 1120px) {
+    gap: 40px;
+    
+  }
+  @media (max-width: 1050px) {
+    flex-direction: column;
+    
+  }
 }
 
 .skill-text {
@@ -133,6 +179,18 @@ span {
   border-radius: 30px;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
+  @media (max-width: 1050px) {
+    min-width: 95%;
+    
+  }
+  @media (max-width: 575px) {
+    height: 60%;
+    
+  }
+  @media (max-width: 450px) {
+    height: 75%;
+     
+   }
 }
 
 mark {
@@ -153,7 +211,21 @@ mark {
   width: 110px;
   text-align: center;
   letter-spacing: -3%;
+  
+  @media (max-width: 575px) {
+    margin-left:  15px;
+    
+  }
+  @media (max-width: 490px) {
+   margin-left: unset;
+    
+  }
+    
+
 }
+
+
+  
 
 .skill-icons {
   display: flex;
@@ -166,6 +238,33 @@ mark {
 .layout-container {
   display: flex;
   gap: 72px;
+
+
+
+    flex-wrap: wrap;
+    
+    @media (max-width: 1200px) {
+      gap: 52px;
+      
+    }
+    
+ 
+
+    @media (max-width: 1120px) {
+      gap: 24px;
+      
+    }
+    
+    @media (max-width: 575px) {
+      justify-content: center;
+      
+    }
+    @media (max-width: 410px) {
+      gap: 12px;
+       
+     }
+    
+
 }
 
 .skill-history {
@@ -240,6 +339,10 @@ mark {
 
   h3 {
     white-space: nowrap;
+    @media (max-width: 450px) {
+      white-space: unset;
+       
+     }
   }
 
 
