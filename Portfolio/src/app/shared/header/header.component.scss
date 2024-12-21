@@ -35,6 +35,10 @@ li {
     cursor: pointer;
     color: $primary-color;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .left-container {
@@ -42,6 +46,9 @@ li {
   align-items: center;
   gap: 24px;
   margin-left: 96px;
+  @media(max-width: 768px) {
+    display: none;
+  }
 }
 
 .right-contaner {
@@ -49,6 +56,10 @@ li {
   align-items: center;
 
   margin-right: 96px;
+
+  @media(max-width: 768px) {
+    display: none;
+  }
 }
 
 .language-toggle {
@@ -84,4 +95,96 @@ li {
 .lang-btn.active {
   background-color: $primary-color;
   color: white;
+}
+
+
+
+.responsiv-header {
+margin: 32px 16px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+@media (min-width: 769px) {
+  display: none;
+}
+
+}
+
+.hamburger-menu {
+  width: 35px; 
+  height: 25px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  cursor: pointer; 
+  position: relative; 
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 4px; 
+  background-color: white;
+  border-radius: 2px; 
+  transition: 0.22s ease; 
+  transform-origin: center; 
+  z-index: 10;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0; 
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.side-menu {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  border-radius: 20px;
+  border: 1px solid $second-color-10;
+
+  position: fixed;
+  top: 0;
+  right: -250px; 
+  width: 200px;
+  height: 100%;
+  background-color: $second-color-10;
+  backdrop-filter: blur(8px) brightness(1.2) contrast(140%) grayscale(50%);
+
+  color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease; 
+  z-index: 9;
+  padding: 90px 20px;
+}
+
+.side-menu.open {
+  transform: translateX(-250px); 
+  -webkit-box-shadow: 5px 0px 30px 17px rgba(0,0,0,0.5); 
+  box-shadow: 5px 0px 30px 17px rgba(0,0,0,0.5);
+}
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu li {
+  margin: 20px 0;
+}
+
+.side-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
 }

@@ -14,10 +14,13 @@ import { GlobalService } from '../global.service';
 
 export class HeaderComponent {
   constructor(public globalService: GlobalService) {}
+  isMenuOpen = false;
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen; 
+  }
 
-  // Funktion, um die Sprache umzuschalten
   toggleLanguage() {
     this.globalService.isDE = !this.globalService.isDE;
-    // Emitte den neuen Wert an die AppComponent
+  
   }
 }

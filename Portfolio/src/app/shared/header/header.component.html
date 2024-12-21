@@ -1,4 +1,42 @@
 <header>
+<div class="responsiv-header">
+  <svg width="36" height="48" viewBox="0 0 36 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_29589_772)">
+    <path d="M35.168 7.29378V0H0.72622V20.5741H0.732535L0 48H6.68123L7.06644 32.3515L14.8023 48H19.8353L27.4953 32.522L28.0447 48H34.4291L33.3745 17.9724H27.5774L17.0441 39.3296L7.66004 20.1447V7.29378H35.168Z" fill="#3DCFB6"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_29589_772">
+    <rect width="35.168" height="48" fill="white"/>
+    </clipPath>
+    </defs>
+    </svg>
+
+    <div class="hamburger-menu" [class.active]="isMenuOpen" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="side-menu" [class.open]="isMenuOpen">
+      <a href="#">@if(globalService.isDE) { Über Mich } @else { About me }</a>
+
+      <a href="#">@if(globalService.isDE) { Skills } @else { Skills }</a>
+
+      <a href="#">@if(globalService.isDE) { Projekte } @else {
+        Projekte} </a>
+      <div class="language-toggle">
+        <button class="lang-btn" [class.active]="globalService.isDE" (click)="toggleLanguage()">
+          DE
+        </button>
+        <button class="lang-btn" [class.active]="!globalService.isDE" (click)="toggleLanguage()">
+          EN
+        </button>
+      </div>
+    </div>
+
+</div>
+
+
   <div class="left-container">
     <div class="language-toggle">
       <button class="lang-btn" [class.active]="globalService.isDE" (click)="toggleLanguage()">
