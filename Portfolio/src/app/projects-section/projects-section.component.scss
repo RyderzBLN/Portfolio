@@ -2,7 +2,7 @@
 
 section {
   position: relative;
-  height: 70dvh;
+  min-height: 70dvh;
   background: radial-gradient(
     22.43% 43.85% at 98.78% 52.45%,
     /* Ursprung auf der rechten Seite (98.78% statt 1.22%) */ $second-color-10
@@ -22,6 +22,8 @@ section {
     padding-right: 32px;
   }
 }
+
+
 
 span {
   font-family: "Karla", monospace;

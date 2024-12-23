@@ -4,7 +4,7 @@ section {
 
 
 overflow: hidden;
-  height: 70dvh;
+  min-height: 60dvh;
   color: $first-color;
   padding-top: 105px;
   background: $first-color;
@@ -43,6 +43,7 @@ h4 {
 
 
 .main-ref {
+  margin-top: 50px;
   mask: linear-gradient(90deg, transparent, white 3%, white 97%, transparent);
   -webkit-mask: linear-gradient(
     90deg,
@@ -64,6 +65,7 @@ height: 450px;
 
   @media (max-width: 900px) {
     gap: 12px;
+    margin-top: 160px;
   }
 }
 

@@ -20,8 +20,13 @@ section {
     padding: 0 32px 102px 32px;
   }
   @media (max-width: 450px) {
-    padding: 0 12px 102px 12px;
-    min-height: 1600px
+    padding: 0 12px 0px 12px;
+    min-height: 130dvh
+   }
+//IPHONE SE
+   @media(device-width: 375px) and (device-height: 667px) {
+
+    min-height: 180dvh
    }
 
   
@@ -125,6 +130,9 @@ h4 {
   font-weight: 700;
   color: $primary-color;
   font-family: "Karla", monospace;
+  @media (max-width: 600px) {
+margin-top: 64px;
+   }
 }
 
 span {
@@ -138,6 +146,11 @@ span {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media(max-width: 1000px){
+    height: unset;
+    min-height: 800px;
+  }
 }
 
 .skill-container {
@@ -183,11 +196,12 @@ span {
     
   }
   @media (max-width: 575px) {
-    height: 60%;
+    min-height: 60%;
     
   }
   @media (max-width: 450px) {
-    height: 75%;
+    min-height: 75%;
+height: unset;
      
    }
 }
@@ -256,10 +270,11 @@ mark {
     
     @media (max-width: 575px) {
       justify-content: center;
+      margin-bottom: 48px;
       
     }
     @media (max-width: 410px) {
-      gap: 12px;
+      gap: 5px;
        
      }
     
