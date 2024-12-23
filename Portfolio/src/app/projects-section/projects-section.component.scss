@@ -10,7 +10,17 @@ section {
     /* Zweite Farbe, z.B. $second-color-70 */ $first-color 100%
       /* Erste Farbe, z.B. $first-color */
   );
-  padding: 0px 464px 16px 96px;
+  padding: 0px 96px 16px 96px;
+
+  @media (max-width: 980px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media (max-width: 850px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 span {
@@ -20,14 +30,21 @@ span {
   font-size: 24px;
 }
 
-
-
 h2 {
   font-size: 64px;
   font-weight: 700;
   font-family: "Fira Code", monospace;
   color: $primary-color;
   margin: 0;
+  white-space: nowrap;
+  @media (max-width: 850px) {
+    font-size: 58px;
+    white-space: unset;
+  }
+  @media (max-width: 450px) {
+    font-size: 52px;
+    white-space: unset;
+  }
 }
 
 h4 {
@@ -46,8 +63,19 @@ h4 {
   top: 200px;
 
   display: none;
-  animation: fadeInPic 1s ;
+  animation: fadeInPic 1s;
   transition: 0.12s ease-in-out;
+
+  @media (max-width: 1300px) {
+    width: 283px;
+    height: 213px;
+    top: 230px;
+  }
+
+  @media (max-width: 950px) {
+    width: 226px;
+    height: 170px;
+  }
 }
 
 .pollo-pic {
@@ -57,36 +85,43 @@ h4 {
   right: 60px;
   top: 270px;
   display: none; /* Standardmäßig unsichtbar */
-  animation: fadeInPic 1s ;
+  animation: fadeInPic 1s;
   transition: 0.05s ease-in-out;
+  @media (max-width: 1300px) {
+    width: 283px;
+    height: 213px;
+    top: 250px;
+  }
+
+  @media (max-width: 950px) {
+    width: 226px;
+    height: 170px;
+  }
 }
 
-.join {
+@media (min-width: 850px) {
+  .join {
+    &:hover ~ .join-pic {
+      display: block;
+    }
+  }
 
-  &:hover ~ .join-pic {
-    display: block;
-  } 
-}
-
-.pollo {
-
-  &:hover ~ .pollo-pic {
-    display: block;
+  .pollo {
+    &:hover ~ .join-pic {
+      display: block;
+    }
   }
 }
 
 @keyframes fadeInPic {
   0% {
-opacity: 0;
-scale: 0.75;
-
+    opacity: 0;
+    scale: 0.75;
   }
   100% {
     opacity: 1;
   }
 }
-
-
 
 .wrapper {
   display: flex;
@@ -94,6 +129,16 @@ scale: 0.75;
   width: 880px;
   height: 100%;
   gap: 40px;
+
+  @media (max-width: 1500px) {
+    width: 60%;
+  }
+  @media (max-width: 850px) {
+    width: 95%;
+  }
+  @media (max-width: 360px) {
+    width: 99%;
+  }
 }
 
 .projects-head {
@@ -106,6 +151,9 @@ scale: 0.75;
     font-family: "Karla", monospace;
     line-height: 21.5px;
     text-align: justify;
+    @media(max-width: 370px) {
+      font-size: 16px;
+    }
   }
 }
 .head {
@@ -128,6 +176,9 @@ scale: 0.75;
     color: white;
     font-family: "Karla", monospace;
     font-size: 18px;
+    @media(max-width: 370px) {
+      font-size: 16px;
+    }
   }
 
   &:hover {
@@ -135,11 +186,15 @@ scale: 0.75;
     cursor: pointer;
   }
 
+  @media(max-width: 600px) {
+    flex-direction: column;
+    gap: 4px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding: 20px 8px;
 
+  }
 }
-
-
-
 
 .used-technologies {
   display: flex;
@@ -147,6 +202,9 @@ scale: 0.75;
   height: 22px;
   align-items: center;
   gap: 8px;
+  @media(max-width: 600px) {
+    justify-content: unset;
+  }
 }
 
 hr {

@@ -8,6 +8,7 @@ import { ProjectsSectionComponent } from './projects-section/projects-section.co
 import { ReferenceSectionComponent } from './reference-section/reference-section.component';
 import { ContactMeSectionComponent } from './contact-me-section/contact-me-section.component';
 import { FooterSectionComponent } from "./shared/footer-section/footer-section.component";
+import { ProjectModalComponent } from './projects-section/project-modal/project-modal.component';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,8 @@ import { FooterSectionComponent } from "./shared/footer-section/footer-section.c
     ProjectsSectionComponent,
     ReferenceSectionComponent,
     ContactMeSectionComponent,
-    FooterSectionComponent
+    FooterSectionComponent,
+    ProjectModalComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
