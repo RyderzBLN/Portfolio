@@ -2,7 +2,7 @@
 
 section {
   position: relative;
-  height: 80dvh;
+  min-height: 80dvh;
   background: radial-gradient(
     22.43% 43.85% at 1.22% 52.45%,
     $second-color-70 0%,
@@ -21,17 +21,11 @@ section {
   }
   @media (max-width: 450px) {
     padding: 0 12px 102px 12px;
-     
+    min-height: 1600px
    }
 
-   @media (max-width: 450px) {
-
-     height: 1220px
-   }
-   @media (max-width: 450px) and (max-height: 780px) {
-
-    height: 1450px
-  }
+  
+  
 }
 
 
@@ -112,6 +106,11 @@ h2 {
 .g-myskills-head {
   white-space: nowrap;
   font-size: 56px;
+  @media (max-width: 550px) {
+
+     hyphens: auto;
+     white-space: unset;
+   }
 }
 
 h3 {

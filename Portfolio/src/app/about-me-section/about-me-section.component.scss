@@ -1,32 +1,16 @@
 @import "../../styles.scss";
 
 section {
-  height: 110dvh;
+  min-height: 110dvh;
   background-color: rgba(28, 28, 28, 1);
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $first-color;
   @media (max-width: 1050px) {
     align-items: unset;
   }
-  @media (max-width: 600px) {
-    height: 145dvh;
-  }
-  @media (max-width: 550px) {
-    height: 150dvh;
-  }
-  @media (max-width: 450px) {
-    height: 155dvh;
-  }
-  @media (max-width: 420px) {
-    height: 135dvh;
-  }
-  @media (max-width: 400px) {
-    height: 145dvh;
-  }
-  @media (max-width: 350px) {
-    height: 155dvh;
-  }
+  
 
   @media (min-width: 600px) and (max-width: 1050px) {
     height: 150dvh;
@@ -41,7 +25,8 @@ h2 {
   font-family: "Fira Code", monospace;
   
   @media (max-width: 350px) {
-    font-size: 58px;
+    font-size: 45px;
+
   }
 }
 
@@ -51,7 +36,7 @@ h2 {
   margin: 144px 120px;
 
   max-width: 1320px;
-  height: 710px;
+  min-height: 710px;
 
   @media (max-width: 1500px) {
     gap: 110px;
@@ -153,6 +138,9 @@ h2 {
     font-family: "Karla", monospace;
     font-size: 24px;
     font-weight: 500;
+    @media (max-width: 600px) {
+      font-size: 20px;
+    }
   }
 
   > h2 {
@@ -161,6 +149,9 @@ h2 {
     font-weight: 700;
     @media (max-width: 1250px) {
       font-size: 60px;
+    }
+    @media (max-width: 600px) {
+      font-size: 58px;
     }
   }
   @media (min-width: 600px) and (max-width: 1050px) {
@@ -179,12 +170,12 @@ h2 {
   padding: 32px;
   gap: 32px;
   height: 600px;
-  max-height: 900px;
+
   border: 2px solid $primary-color;
   background-color: $second-color-70;
 
   width: 600px;
-  max-width: 700px;
+
   border-radius: 30px;
   animation: flipIt 1s ease-in-out forwards;
   transition: 0.3 linear;
