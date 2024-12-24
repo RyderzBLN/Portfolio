@@ -17,7 +17,7 @@ section {
   
   @media (max-width: 1150px) {
     gap: 52px;
-    padding: 0 32px 102px 32px;
+    padding: 54px 80px 102px 80px;
   }
   @media (max-width: 450px) {
     padding: 0 12px 0px 12px;
@@ -111,7 +111,8 @@ h2 {
 .g-myskills-head {
   white-space: nowrap;
   font-size: 56px;
-  @media (max-width: 550px) {
+  margin-top: 32px;
+  @media (max-width: 750px) {
 
      hyphens: auto;
      white-space: unset;
@@ -142,7 +143,7 @@ span {
 }
 
 .main-container {
-  height: 570px;
+  min-height: 570px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -182,8 +183,9 @@ span {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  height: 500px;
-
+  min-height: 450px;
+  max-height: 550px;
+  max-width: 700px;
 
   padding: 32px;
   background: $primary-10;
@@ -193,6 +195,8 @@ span {
   -webkit-backdrop-filter: blur(15px);
   @media (max-width: 1050px) {
     min-width: 95%;
+    height: unset;
+    max-height: unset;
     
   }
   @media (max-width: 575px) {
@@ -200,9 +204,16 @@ span {
     
   }
   @media (max-width: 450px) {
-    min-height: 75%;
+    min-height: 60dvh;
 height: unset;
-     
+     padding-top: 45px;
+   }
+}
+
+.p-top-ge {
+  @media (max-width: 450px) {
+
+     padding-top: 45px;
    }
 }
 
@@ -225,10 +236,7 @@ mark {
   text-align: center;
   letter-spacing: -3%;
   
-  @media (max-width: 575px) {
-    margin-left:  15px;
-    
-  }
+
   @media (max-width: 490px) {
    margin-left: unset;
     
@@ -263,10 +271,7 @@ mark {
     
  
 
-    @media (max-width: 1120px) {
-      gap: 24px;
-      
-    }
+
     
     @media (max-width: 575px) {
       justify-content: center;
@@ -274,7 +279,7 @@ mark {
       
     }
     @media (max-width: 410px) {
-      gap: 5px;
+      gap: 30px;
        
      }
     
@@ -352,9 +357,9 @@ mark {
   }
 
   h3 {
-    white-space: nowrap;
+    white-space: wrap;
     @media (max-width: 450px) {
-      white-space: unset;
+      
        
      }
   }
@@ -363,6 +368,8 @@ mark {
 
   .g-need-text {
     margin-bottom: -5px;
+    white-space: wrap;
+   
   }
 
 

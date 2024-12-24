@@ -19,7 +19,7 @@
   line-height: 20px;
 
   display: flex;
-
+  padding: 15px;
   align-items: center;
   font-size: 16px;
   border-radius: 30px;
@@ -43,13 +43,13 @@
   text-align: unset;
 display: unset;
 height: 270px;
-padding: 20px;
+padding: 5px;
   }
   @media(max-width: 370px) {
     text-align: unset;
   display: unset;
   height: 300px;
-  padding: 14px;
+  padding: 5px;
     }
 
 
@@ -178,8 +178,8 @@ input[type="radio"] {
   background-color: $primary-10;
   color: rgba(255, 255, 255, 0.5);
 
-  @media(max-width: 450px) {
-  
+  @media(max-width: 915px) {
+    display: none;
   }
 }
 
@@ -191,7 +191,9 @@ input[type="radio"] {
   z-index: 0;
   background-color: $primary-10;
   color: rgba(255, 255, 255, 0.5);
- 
+  @media(max-width: 915px) {
+    display: none;
+  }
 }
 
 #item-1:checked ~ .cards #ref-1 .quotes-img,

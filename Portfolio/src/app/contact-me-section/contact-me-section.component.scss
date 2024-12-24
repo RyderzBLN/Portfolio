@@ -1,25 +1,53 @@
 @import "../../styles.scss";
 
 section {
-    height: 85dvh;
+    min-height: 85dvh;
     padding: 144px 96px;
     background-color: $first-color;
+    @media(max-width: 1100px) {
+        flex-direction: column;
+        min-height: 110dvh;
+        padding: 54px 8px;
+       }
+
+       @media(max-width: 350px) {
+        flex-direction: column;
+
+        padding: 24px 8px;
+       }
+
 }
 
 
 .main-contact {
 
-    width: 1350px;
+    max-width: 1350px;
     min-height: 550px;
     gap: 64px;
     padding: 0 15px;
     display: flex;
+@media(max-width: 850px) {
+    flex-direction: column;
+    gap: 45px;
+}
 
-   
+@media(max-width: 850px) {
+    flex-direction: column;
+    gap: 30px;
+}
+@media(max-width: 450px) {
+padding: unset;
+}
+
 }
 
 .input-overlay {
     padding-left: 10px;
+
+    @media (max-width: 850px) {
+        padding-left: unset;
+        
+    }
 }
 
 
@@ -50,6 +78,10 @@ h2 {
     font-weight: 700;
     line-height: 64px;
     font-family: "Fira Code", monospace;
+
+    @media(max-width: 450px) {
+       font-size: 48px;
+    }
 }
 
 .contact-text {
@@ -60,6 +92,17 @@ h2 {
     flex-direction: column;
     gap: 40px;
 
+
+@media(max-width: 850px) {
+    width: 100%;
+}
+@media(max-width: 600px) {
+    gap: 35px;
+}
+
+@media(max-width: 400px) {
+    gap: 25px;
+}
 }
 
 .contact-head {
@@ -82,6 +125,9 @@ h2 {
     font-family: "Fira Code", monospace;
     font-weight: 700;
     font-size: 24px;    
+    @media(max-width: 450px) {
+        font-size: 22px;
+    }
 }
 
 .agb-submit {
@@ -97,14 +143,18 @@ width: 50%;
 display: flex;
 flex-direction: column;
 gap: 40px;
+@media(max-width: 850px) {
+    width: 100%;
+}
 }
 
 .agb-check-container {
     display: flex;
-    height: 30px;
-    padding-left: 5px;
+    min-height: 30px;
+    padding-left: 1px;
     align-items: center;
     gap: 12px;
+    margin-top: 25px;
 
     p {
         color: white;
@@ -128,6 +178,10 @@ gap: 40px;
     white-space: nowrap;
     font-size: 14px;
     font-family: "Fira Code", monospace;
+    @media(max-width: 450px) {
+        font-size: 15px;
+        white-space: unset
+    }
 }
 
 .error-message {
@@ -136,6 +190,10 @@ gap: 40px;
     white-space: nowrap;
     font-size: 14px;
     font-family: "Fira Code", monospace;
+    @media(max-width: 450px) {
+        font-size: 15px;
+        white-space: unset
+    }
 }
 
 .button {
@@ -153,11 +211,32 @@ gap: 40px;
 }
 
 .checkbox {
-    width: 18px;
-    height: 18px;
+    width: 25px;
+    height: 35px;
     border: 2px solid $primary-color;
-    margin-bottom: 3px;
+
     cursor: pointer;
+
+
+
+    @media(min-width: 850px) and (max-width: 1700px) {
+        width: 30px;
+        height: 30px;
+    }
+
+    @media(min-width: 500px) and (max-width: 850px) {
+        width: 18px;
+        height: 15px;
+    }
+
+    @media(max-width: 450px) {
+        width: 25px;
+        height: 20px;
+    }
+    @media(min-width: 450px) {
+        width: 25px;
+        height: 23px;
+    }
 }
 
 .submit-container {
@@ -174,7 +253,7 @@ textarea {
     color: rgba(255, 255, 255, 0.8);
     min-height: 50px;
     overflow-y: auto;
-    width: 575px;
+    max-width: 575px;
     line-height: 30px;
     resize: none; 
 
@@ -198,6 +277,11 @@ textarea {
     &:focus {
         border: 2px solid $primary-color;
     }
+
+    @media(max-width: 850px) {
+        padding-left: 0px;
+        width: unset;
+    }
     
 }
 
@@ -220,6 +304,10 @@ input {
         letter-spacing: 1px;
     }
 
+    @media(max-width: 850px) {
+        padding-left: 0px;
+    }
+
 }
 
 input[list]::-webkit-input-placeholder {
@@ -239,6 +327,11 @@ label {
     font-weight: 500;
     font-family: "Fira Code", monospace;
     color: $primary-color;
+    white-space: nowrap;
+
+    @media(max-width: 450px) {
+        font-size: 20px;
+    }
 }
 
 
@@ -249,7 +342,16 @@ label {
     border-top: 1px solid $primary-half;
     height: 130px;
     padding: 32px 230px 32px 32px;
+@media(max-width: 1200px) {
+    padding: 32px 32px 32px 32px;
+}
+@media(max-width: 850px) {
+    padding: 32px 8px
+}
 
+@media(max-width: 450px) {
+    height: 150px;
+}
 }
 
 .border-btm {

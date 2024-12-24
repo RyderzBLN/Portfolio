@@ -1,20 +1,35 @@
 @import "../../../styles.scss";
 
 footer {
-    height: 20vh;
+    min-height: 20vh;
 }
 
 .footer-main {
     display: flex;
     margin: 78px 96px 64px 96px;
 
-    height: 130px
+    height: 130px;
+
+    @media(max-width: 800px) {
+  
+        margin: 54px 24px;
+    }
+
+    @media(max-width: 450px) {
+        justify-content: space-between;
+        margin: 54px 8px;
+    }
 }
+
 
 .left {
     display: flex;
     flex-direction: column;
     gap: 32px;
+
+    @media(max-width: 450px) {
+       width: 50% !important;
+    }
 }
 
 .location-description {
@@ -38,10 +53,31 @@ footer {
         font-size: 18px;
         color: $primary-color;
         font-family: "Fira Code", monospace;
+        white-space: wrap;
 
+        @media(max-width: 550px) {
+           margin-left: 55px;
+        }
     }
+
+@media(max-width: 450px) {
+    display: none;
+}
 }
 
+.resp-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary-color;
+    font-family: "Fira Code", monospace;
+    font-size: 18px;
+    padding-bottom: 12px;
+
+    @media(min-width: 450px) {
+        display: none;
+    }
+}
 
 .right {
     display: flex;
@@ -51,7 +87,9 @@ justify-content: center;
 
 
     text-align: left;
-    
+ @media(max-width: 450px) {
+       width: 50% !important;
+    }
 }
 
 .link-container {
