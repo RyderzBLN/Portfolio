@@ -16,11 +16,7 @@ section {
     padding-left: 32px;
     padding-right: 32px;
   }
-
-
 }
-
-
 
 span {
   font-family: "Karla", monospace;
@@ -65,6 +61,12 @@ h4 {
   animation: fadeInPic 1s;
   transition: 0.12s ease-in-out;
 
+  .join {
+    &:hover ~ .join-pic {
+      display: block;
+    }
+  }
+
   @media (max-width: 1300px) {
     width: 283px;
     height: 213px;
@@ -75,6 +77,14 @@ h4 {
     width: 226px;
     height: 170px;
   }
+
+  @media (min-width: 850px) {
+    .join {
+      &:hover ~ .join-pic {
+        display: block;
+      }
+    }
+  }
 }
 
 .pollo-pic {
@@ -83,9 +93,10 @@ h4 {
   position: absolute;
   right: 60px;
   top: 270px;
-  display: none; /* Standardmäßig unsichtbar */
+  display: none; 
   animation: fadeInPic 1s;
   transition: 0.05s ease-in-out;
+
   @media (max-width: 1300px) {
     width: 283px;
     height: 213px;
@@ -99,13 +110,12 @@ h4 {
 }
 
 @media (min-width: 850px) {
-  .join {
-    &:hover ~ .join-pic {
+  .pollo {
+    &:hover ~ .pollo-pic {
       display: block;
     }
   }
-
-  .pollo {
+  .join {
     &:hover ~ .join-pic {
       display: block;
     }
@@ -135,7 +145,6 @@ h4 {
   @media (max-width: 850px) {
     width: 100%;
   }
-
 }
 
 .projects-head {
@@ -148,7 +157,7 @@ h4 {
     font-family: "Karla", monospace;
     line-height: 21.5px;
     text-align: justify;
-    @media(max-width: 370px) {
+    @media (max-width: 370px) {
       font-size: 16px;
     }
   }
@@ -173,7 +182,7 @@ h4 {
     color: white;
     font-family: "Karla", monospace;
     font-size: 18px;
-    @media(max-width: 370px) {
+    @media (max-width: 370px) {
       font-size: 16px;
     }
   }
@@ -183,13 +192,12 @@ h4 {
     cursor: pointer;
   }
 
-  @media(max-width: 600px) {
+  @media (max-width: 600px) {
     flex-direction: column;
     gap: 4px;
     padding-left: 24px;
     padding-right: 24px;
     padding: 20px 8px;
-
   }
 }
 
@@ -199,7 +207,7 @@ h4 {
   height: 22px;
   align-items: center;
   gap: 8px;
-  @media(max-width: 600px) {
+  @media (max-width: 600px) {
     justify-content: unset;
   }
 }
