@@ -19,10 +19,21 @@ contactData = {
   message: ''
 }
 
+isCheckboxChecked = false; 
+isButtonEnabled = false; 
+
 onSubmit(ngForm: NgForm){
 if (ngForm.valid && ngForm.submitted) {
   console.log(this.contactData);
 }
+}
 
+toggleCheckbox() {
+  this.isCheckboxChecked = !this.isCheckboxChecked; 
+  this.isButtonEnabled = this.isCheckboxChecked; 
+}
+
+getButtonText(): string {
+  return this.globalService.isDE ? 'Senden' : 'Send';
 }
 }

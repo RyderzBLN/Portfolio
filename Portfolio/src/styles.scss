@@ -17,6 +17,7 @@ $primary-half: rgba(61, 207, 182, 0.5);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -25,6 +26,7 @@ body {
     background: linear-gradient(55.22deg, $first-color 36.26%, $second-color 93.28%);
     background-repeat: no-repeat;
     background-size: contain;
+
 }
 
 ul {

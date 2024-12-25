@@ -10,12 +10,7 @@ section {
     $first-color 36.26%,
     $second-color 93.28%
   );
-
-
-
 }
-
-
 
 .hero-container {
   display: flex;
@@ -56,6 +51,10 @@ section {
     }
     @media only screen and (device-width: 430px) and (device-height: 932px) {
       font-size: 28px;
+    }
+
+    @media   (max-width: 390px) {
+     margin-top: -5rem;
     }
   }
 
@@ -141,46 +140,49 @@ section {
   @media only screen and (device-width: 430px) and (device-height: 932px) {
     transform: scale(1.2);
   }
-
-
 }
 
 @keyframes BigSmall {
   0% {
     transform: scale(1);
-    opacity: 0.9;
+    opacity: 0.8;
+    color: $primary-color;
   }
   50% {
-    transform: scale(1.18);
+    transform: scale(0.5);
     opacity: 1;
-
+    transform: rotate(-4deg);
+    color: $primary-color;
+    font-size: 20px;
   }
+
+  80% {
+    transform: rotate(4deg);
+  }
+
   100% {
     transform: scale(1);
-    opacity: 0.9;
+    opacity: 0.8;
+    color: $primary-color;
   }
 }
-
 
 .banner {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid rgba(255, 255, 255, 0.769);
+  border: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 100px;
   width: 170px;
   height: 48px;
   font-family: "Karla", monospace;
   font-size: 18px;
   font-weight: 400;
-  box-shadow:  0 0 10px rgba(61, 255, 210, 1);
-
 
   p {
-    text-shadow: 0 0 20px rgba(61, 255, 210, 1),
-    0 0 40px rgba(61, 255, 210, 1);
-  color: white;
-  font-family: "Karla", monospace;
+    text-shadow: 0 0 20px rgba(61, 255, 210, 1), 0 0 40px rgba(61, 255, 210, 1);
+    color: white;
+    font-family: "Karla", monospace;
   }
 
   cursor: pointer;
@@ -188,9 +190,7 @@ section {
     p {
       animation: BigSmall 2s linear infinite;
       text-shadow: 0 0 20px rgba(61, 255, 210, 1),
-      0 0 40px rgba(61, 255, 210, 1),
-      0 0 60px rgba(61, 255, 210, 1);
-
+        0 0 40px rgba(61, 255, 210, 1), 0 0 60px rgba(61, 255, 210, 1);
     }
   }
 
@@ -222,7 +222,7 @@ section {
   width: 100%;
   overflow: hidden;
   z-index: 5;
- /* mask: linear-gradient(90deg, transparent, white 3%, white 97%, transparent);
+  mask: linear-gradient(90deg, transparent, white 3%, white 97%, transparent);
   -webkit-mask: linear-gradient(
     90deg,
     transparent,
@@ -230,7 +230,7 @@ section {
     white 97%,
     transparent
   );
-*/
+
   @media only screen and (device-width: 820px) and (device-height: 1180px) {
     height: 85px;
     bottom: 120px;
@@ -313,12 +313,22 @@ section {
   display: flex;
 
   gap: 12px;
+
+  @media (max-width: 400px) {
+    margin-left: -1rem;
+    
+  }
 }
 
 .rotate-icon {
   transform: rotate(-270deg);
 }
 
+@media (min-width: 1050px) {
+  .responsiv-mail {
+    display: none;
+  }
+}
 .side-scroller {
   user-select: none;
   letter-spacing: 2px;
@@ -388,6 +398,12 @@ section {
   @media only screen and (device-width: 412px) and (device-height: 914px) {
     margin-top: 120px;
   }
+  @media only screen and (device-width: 375px) and (device-height: 667px) {
+    height: 55%;
+  }
+  @media (max-width: 390px) {
+    height: 55%;
+  }
 }
 
 .stretch {
@@ -415,6 +431,28 @@ section {
   height: 48px;
   border-radius: 30px;
   border: 1.5px solid $primary-color;
+
+  img {
+    animation: upDown 2.8s infinite;
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .svg-wrapper {

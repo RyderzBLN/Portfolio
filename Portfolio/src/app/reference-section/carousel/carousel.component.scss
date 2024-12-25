@@ -103,6 +103,12 @@ display: none;
   border: 1px inset black;
 
   background-color: $primary-half;
+
+  @media(max-width: 450px) {
+    width: 24px;
+    height: 24px;
+    border: none;
+}
 }
 
 .select:active {
@@ -130,6 +136,8 @@ display: none;
 
   }
 
+
+
 }
 
 
@@ -155,6 +163,10 @@ display: none;
       cursor: pointer;
     }
   }
+
+  @media(max-width: 450px) {
+    gap: 40px;
+  }
 }
 
 input[type="radio"] {
@@ -178,9 +190,7 @@ input[type="radio"] {
   background-color: $primary-10;
   color: rgba(255, 255, 255, 0.5);
 
-  @media(max-width: 915px) {
-    display: none;
-  }
+
 }
 
 #item-1:checked ~ .cards #ref-2,
@@ -191,9 +201,7 @@ input[type="radio"] {
   z-index: 0;
   background-color: $primary-10;
   color: rgba(255, 255, 255, 0.5);
-  @media(max-width: 915px) {
-    display: none;
-  }
+
 }
 
 #item-1:checked ~ .cards #ref-1 .quotes-img,

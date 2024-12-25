@@ -78,14 +78,24 @@
           </div>
           <div class="agb-submit">
             <div class="agb-check-container">
-              <div class="checkbox"></div>
+              <div 
+              class="checkbox" 
+              [class.checked]="isCheckboxChecked" 
+              (click)="toggleCheckbox()">
+            </div>
               <p>
                 @if(globalService.isDE)
                 { Ich habe die <a href="#"><strong>Datenschutzerklärung</strong></a> gelesen und <strong>Aktzeptiere</strong> sie.} @else {
                 I've read the <a href="#"><strong>Privacy policy</strong></a> and agree to the processing of my data as outlined. }</p>
             </div>
             <div class="submit-container">
-              <input class="button" type="submit" />
+              <input
+              class="button"
+              type="submit"
+              [disabled]="!isButtonEnabled"
+              [class.enabled]="isButtonEnabled"
+              [value]="getButtonText()" 
+            />
             </div>
           </div>
         </form>
