@@ -7,33 +7,67 @@ import { GlobalService } from '../shared/global.service';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './contact-me-section.component.html',
-  styleUrl: './contact-me-section.component.scss'
+  styleUrl: './contact-me-section.component.scss',
 })
 export class ContactMeSectionComponent {
   constructor(public globalService: GlobalService) {}
 
-  
-contactData = {
-  name: '',
-  email: '',
-  message: ''
-}
+  contactData = {
+    name: '',
+    email: '',
+    message: '',
+  };
 
-isCheckboxChecked = false; 
-isButtonEnabled = false; 
+  isCheckboxChecked = false;
+  isButtonEnabled = false;
 
-onSubmit(ngForm: NgForm){
-if (ngForm.valid && ngForm.submitted) {
-  console.log(this.contactData);
-}
-}
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.valid && ngForm.submitted) {
+      console.log(this.contactData);
+      this.userFeedback();
+      setTimeout(() => {
+        this.resetForm(ngForm);
+      }, 5000);
+    } else if (!ngForm.valid) {
+      this.triggerEffect();
+    }
+  }
 
-toggleCheckbox() {
-  this.isCheckboxChecked = !this.isCheckboxChecked; 
-  this.isButtonEnabled = this.isCheckboxChecked; 
-}
+  userFeedback() {
+    const feedback = document.querySelector('.user-feedback');
+    if (feedback) {
+      feedback.classList.add('visible');
+      setTimeout(() => {
+        feedback.classList.remove('visible');
+      }, 5500);
+    }
+  }
 
-getButtonText(): string {
-  return this.globalService.isDE ? 'Senden' : 'Send';
-}
+  resetForm(ngForm: NgForm) {
+    this.contactData = {
+      name: '',
+      email: '',
+      message: '',
+    };
+    ngForm.resetForm();
+  }
+
+  triggerEffect() {
+    const button = document.querySelector('.button');
+    if (button) {
+      button.classList.add('effekt');
+      setTimeout(() => {
+        button.classList.remove('effekt');
+      }, 350);
+    }
+  }
+
+  toggleCheckbox() {
+    this.isCheckboxChecked = !this.isCheckboxChecked;
+    this.isButtonEnabled = this.isCheckboxChecked;
+  }
+
+  getButtonText(): string {
+    return this.globalService.isDE ? 'Senden' : 'Send';
+  }
 }

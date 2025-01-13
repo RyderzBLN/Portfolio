@@ -1,23 +1,30 @@
 @import "../../../styles.scss";
 
 footer {
-    min-height: 20vh;
+    background-color: $first-color;
+    min-height: 20dvh;
+    padding-top: 32px;
+
+    @media (max-width: 700px) {
+       min-height: 15dvh;
+        
+    }
 }
 
 .footer-main {
     display: flex;
-    margin: 78px 96px 64px 96px;
+    margin: 0px 96px 64px 96px;
 
     height: 130px;
 
     @media(max-width: 800px) {
   
-        margin: 54px 24px;
+        margin: 0px 24px 54px 24px;
     }
 
     @media(max-width: 450px) {
         justify-content: space-between;
-        margin: 54px 8px;
+        margin: 0px 8px 20px 8px;
     }
 }
 

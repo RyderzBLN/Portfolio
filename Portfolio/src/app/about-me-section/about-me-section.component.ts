@@ -27,6 +27,8 @@ export class AboutMeSectionComponent {
         },
         { threshold: 0.1 }
       );
+
+      
   
   
      

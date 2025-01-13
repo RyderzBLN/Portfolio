@@ -25,13 +25,18 @@ button {
   border: none;
 }
 
+a {
+  font-family: "Fira Code", monospace;
+}
+
 ul {
   display: flex;
   gap: 24px;
 }
 
-li {
 
+li {
+ 
   &:hover {
     cursor: pointer;
     color: $primary-color;

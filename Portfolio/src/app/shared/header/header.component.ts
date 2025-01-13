@@ -34,5 +34,9 @@ export class HeaderComponent {
     ) {
       this.isMenuOpen = false;
     }
+
+    if (menuElement && menuElement.contains(target)) {
+      this.isMenuOpen = false;
+    }
   }
 }

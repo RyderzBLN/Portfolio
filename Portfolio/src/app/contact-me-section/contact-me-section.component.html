@@ -89,8 +89,8 @@
                 I've read the <a href="#"><strong>Privacy policy</strong></a> and agree to the processing of my data as outlined. }</p>
             </div>
             <div class="submit-container">
-              <input
-              class="button"
+              <input 
+              class="button effekt"
               type="submit"
               [disabled]="!isButtonEnabled"
               [class.enabled]="isButtonEnabled"
@@ -101,6 +101,18 @@
         </form>
       </div>
     </div>
-   
+  </div>
+  <div class="user-feedback">
+    <div class="text-container">
+      <p class="feedback"> @if(globalService.isDE) {
+        Anfrage wird gesendet...
+      } @else {
+        Request is being sent...
+      }
+      </p>
+      <div class="loading-background">
+      <div class="loading"></div>
+      </div>
+    </div>
   </div>
 </section>

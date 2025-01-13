@@ -74,11 +74,18 @@ h2 {
 }
 
 .my-picture {
+  position: relative;
   display: flex;
+  justify-content: center;
 
   > img {
     width: 590px;
     height: 590px;
+    border-radius: 35px;
+    position: relative;
+    overflow: hidden;
+    background: #111;
+    transition: all 0.5s ease;
 
     @media (max-width: 1500px) {
       width: 550px;
@@ -98,21 +105,16 @@ h2 {
     @media (max-width: 1150px) {
       scale: unset;
     }
-
     @media (max-width: 1050px) {
       margin-top: 35px;
       width: 80%;
-     
       margin-top: 16px;
-      aspect-ratio: 3 / 3; 
-      
+      aspect-ratio: 3 / 3;
     }
-
-    @media(max-width: 650px) {
+    @media (max-width: 650px) {
       height: 85%;
       width: 85%;
     }
-    
     @media (max-width: 450px) {
       height: 90%;
       width: 100%;
@@ -120,15 +122,39 @@ h2 {
       padding-right: 8px;
     }
 
-   
- }
- @media (max-width: 1150px) {
-  justify-content: center;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        0deg,
+        transparent,
+        transparent 30%,
+        rgba(0, 255, 255, 0.3)
+      );
+      transform: rotate(-45deg);
+      transition: all 0.5s ease;
+      opacity: 0;
+      z-index: 3000;
+    }
+
+    &:hover {
+      z-index: 4909;
+      background-color: white;
+      transform: scale(1.05);
+      box-shadow: 0 0 85px rgba(0, 255, 255, 0.5);
+
+      &::before {
+        opacity: 1;
+        transform: rotate(-45deg) translateY(100%);
+      }
+    }
+  }
 }
 
- 
-
-}
 
 .about-me-container {
   color: white;
