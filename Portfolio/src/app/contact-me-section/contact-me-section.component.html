@@ -1,4 +1,5 @@
 <section>
+  <div class="main-width">
   <div class="main-contact">
     <div class="contact-text">
       <div class="contact-head">
@@ -85,8 +86,8 @@
             </div>
               <p>
                 @if(globalService.isDE)
-                { Ich habe die <a href="#"><strong>Datenschutzerklärung</strong></a> gelesen und <strong>Aktzeptiere</strong> sie.} @else {
-                I've read the <a href="#"><strong>Privacy policy</strong></a> and agree to the processing of my data as outlined. }</p>
+                { Ich habe die <a routerLink="/app-imprint"><strong>Datenschutzerklärung</strong></a> gelesen und <strong>Aktzeptiere</strong> sie.} @else {
+                I've read the <a routerLink="/app-imprint"><strong>Privacy policy</strong></a> and agree to the processing of my data as outlined. }</p>
             </div>
             <div class="submit-container">
               <input 
@@ -114,5 +115,6 @@
       <div class="loading"></div>
       </div>
     </div>
+  </div>
   </div>
 </section>

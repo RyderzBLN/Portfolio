@@ -74,6 +74,9 @@ li {
   @media(max-width: 768px) {
     display: none;
   }
+  @media(max-width: 1050px) {
+   margin-left: 24px;
+  }
 }
 
 .right-contaner {
@@ -85,6 +88,9 @@ li {
   @media(max-width: 768px) {
     display: none;
   }
+  @media(max-width: 1050px) {
+    margin-right: 12px;
+   }
 }
 
 .language-toggle {
@@ -125,13 +131,16 @@ li {
 
 
 .responsiv-header {
-margin: 32px 16px;
+padding: 16px 16px 32px 16px;
 display: flex;
 justify-content: space-between;
 align-items: center;
 width: 100%;
 @media (min-width: 769px) {
   display: none;
+}
+@media (max-width: 769px) {
+  margin: 32px 0px;
 }
 
 }

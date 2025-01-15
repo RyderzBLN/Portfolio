@@ -1,10 +1,15 @@
 @import "../../styles.scss";
 
 section {
+  background-color: $first-color;
+}
+
+.main-width{
   position: relative;
   min-height: 85dvh;
   padding: 144px 96px;
-  background-color: $first-color;
+  max-width: 1940px;
+  margin: 0 auto;
   @media (max-width: 1100px) {
     flex-direction: column;
     min-height: 110dvh;
@@ -398,7 +403,7 @@ label {
 
 .user-feedback {
   z-index: 9999;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: fixed;

@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { GlobalService } from '../shared/global.service';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-contact-me-section',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './contact-me-section.component.html',
   styleUrl: './contact-me-section.component.scss',
 })
@@ -27,6 +28,7 @@ export class ContactMeSectionComponent {
       this.userFeedback();
       setTimeout(() => {
         this.resetForm(ngForm);
+        this.toggleCheckbox();
       }, 5000);
     } else if (!ngForm.valid) {
       this.triggerEffect();

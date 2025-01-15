@@ -21,13 +21,26 @@ $primary-half: rgba(61, 207, 182, 0.5);
 }
 
 body {
-    max-width: 1940px;
     margin: auto;
     background: linear-gradient(55.22deg, $first-color 36.26%, $second-color 93.28%);
     background-repeat: no-repeat;
     background-size: contain;
 
 }
+
+body::-webkit-scrollbar {
+    width: 8px;   
+    height: 10px;            
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: $first-color;    
+    border-radius: 10px;      
+    border: 5px solid $primary-color; 
+  }
+  body::-webkit-scrollbar-track {
+    background: $second-color;   
+  }
 
 ul {
     list-style: none;

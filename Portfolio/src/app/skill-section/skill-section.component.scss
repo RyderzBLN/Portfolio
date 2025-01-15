@@ -1,14 +1,17 @@
 @import "../../styles.scss";
-
 section {
-  position: relative;
-  min-height: 80dvh;
   background: radial-gradient(
     22.43% 43.85% at 1.22% 52.45%,
     $second-color-70 0%,
     $first-color 100%
   );
+}
 
+.main-skill {
+  position: relative;
+  min-height: 80dvh;
+max-width: 1940px;
+margin: 0 auto;
   padding: 0 96px 144px 96px;
   @media (max-width: 1650px) {
     padding: 0 52px 144px 52px;
@@ -186,6 +189,7 @@ span {
 .tooltip {
   position: relative;
   cursor: pointer;
+
   transition: 0.21s ease-in-out;
   @media (min-width: 750px) {
     &:hover .toolticontainer {
@@ -202,6 +206,7 @@ span {
 }
 
 .toolticontainer {
+  
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -242,11 +247,12 @@ span {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  min-height: 450px;
-  max-height: 550px;
+  min-height: 350px;
+  max-height: 480px;
   max-width: 700px;
 
   padding: 32px;
+  padding-bottom: 12px;
   background: $primary-10;
   border: 1px solid $primary-color;
   border-radius: 30px;
@@ -314,18 +320,23 @@ mark {
   flex-wrap: wrap;
 
   @media (min-width: 1050px) and (max-width: 1200px) {
-    gap: 10px;
+    justify-content: center;
+  }
+
+  @media (max-width: 1050px) {
+justify-content: center;
+margin: unset;
   }
 
   @media (max-width: 850px) {
-    gap: 35px;
-
-    margin-left: 50px;
+    justify-content: center;
+gap: 40px;
+    margin-left: 5px;
   }
 
   @media (max-width: 700px) {
     gap: 64px;
-    margin-left: 0px;
+
   }
 
   @media (max-width: 630px) {
@@ -360,6 +371,7 @@ mark {
 
 .talk-button {
   padding: 13px 24px;
+  margin-bottom: 24px;
   white-space: nowrap;
 
   border: 1px solid white;

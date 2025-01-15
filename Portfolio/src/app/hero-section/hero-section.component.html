@@ -1,4 +1,5 @@
 <section>
+<div class="main-hero">
   <app-header></app-header>
   <div class="hero-container">
     <h3>
@@ -14,16 +15,16 @@
     <div class="banner-container">
       <div class="banner">
         @if(globalService.isDE){
-        <p>Meine Projekte</p>
+       <a href="#projects"><p>Meine Projekte</p></a> 
         } @else {
-        <p>Check my Work</p>
+       <a href="#projects"> <p>Check my Work</p></a>
         }
       </div>
       <div class="banner">
         @if(globalService.isDE){
-        <p>Kontakt</p>
+       <a href="#contact"> <p>Kontakt</p></a>
         } @else {
-        <p>Contact me</p>
+          <a href="#contact"> <p>Contact me</p></a>
         }
       </div>
     </div>
@@ -99,7 +100,7 @@
           <div class="line"></div>
         </div>
         <div class="svg-icon-wrapper">
-          <a href="#">
+          <a href="https://github.com/RyderzBLN" target="_blank">
           <svg
             class="rotate-icon"
             width="32"
@@ -116,7 +117,7 @@
             />
           </svg>
           </a>
-          <a href="#">
+          <a href="https://de.linkedin.com/" target="_blank">
           <svg
             class="rotate-icon"
             width="32"
@@ -131,7 +132,7 @@
             />
           </svg>
           </a>
-          <a class="rotate-icon responsiv-mail" href="mailto:beispiel@catili.de">
+          <a class="rotate-icon responsiv-mail" href="mailto:developer@catili.de">
             <svg class="responsiv-mail" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_30236_774)">
               <mask id="mask0_30236_774" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
@@ -152,10 +153,11 @@
 
         </div>
 
-        <a class="mail-link" href="mailto:beispiel@example.com"
+        <a class="mail-link" href="developer@catili.de"
           >developer&#64;catili.de</a
         >
       </div>
     </div>
   </div>
+</div>
 </section>

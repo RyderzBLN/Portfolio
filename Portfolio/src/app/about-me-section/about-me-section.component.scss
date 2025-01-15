@@ -1,8 +1,13 @@
 @import "../../styles.scss";
 
 section {
-  min-height: 110dvh;
   background-color: rgba(28, 28, 28, 1);
+}
+
+.main-aboutme {
+  min-height: 110dvh;
+  max-width: 1940px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;

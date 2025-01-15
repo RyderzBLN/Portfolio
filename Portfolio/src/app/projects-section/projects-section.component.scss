@@ -1,13 +1,18 @@
 @import "../../styles.scss";
 
-section {
-  position: relative;
-  min-height: 70dvh;
+section{
   background: radial-gradient(
     22.43% 43.85% at 98.78% 52.45%,
     $second-color-10 0%,
     $first-color 100%
   );
+}
+
+.main-project {
+  position: relative;
+  min-height: 70dvh;
+ max-width: 1940px;
+ margin: 0 auto;
   padding: 0px 96px 16px 96px;
 
   @media (max-width: 980px) {

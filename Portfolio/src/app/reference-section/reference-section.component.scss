@@ -1,26 +1,26 @@
 @import "../../styles.scss";
 
 section {
+  background: $first-color;
+}
 
-
-overflow: hidden;
+.main-reference {
+  overflow: hidden;
   min-height: 60dvh;
   color: $first-color;
   padding-top: 105px;
-  background: $first-color;
+  max-width: 1940px;
+  margin: 0 auto;
   overflow-y: hidden;
- 
-  @media(max-width: 900px) {
+
+  @media (max-width: 900px) {
     padding-top: 55px;
   }
 
-  @media(max-width: 600px) {
+  @media (max-width: 600px) {
     padding-top: 30px;
   }
-
 }
-
-
 
 h4 {
   color: $primary-color;
@@ -29,31 +29,27 @@ h4 {
   font-weight: 700;
   margin-bottom: 24px;
 
-  @media(max-width: 650px) {
+  @media (max-width: 650px) {
     font-size: 26px;
     white-space: wrap;
     margin-right: 10px;
     margin-left: 10px;
-  
   }
- @media(max-width: 500px) {
+  @media (max-width: 500px) {
     font-size: 26px;
     white-space: wrap;
     margin-right: 10px;
     margin-left: 10px;
   }
 
-  @media(max-width: 400px) {
+  @media (max-width: 400px) {
     font-size: 22px;
     margin-left: auto;
     margin-right: auto;
     margin-right: 10px;
     margin-left: 10px;
-
   }
 }
-
-
 
 .main-ref {
   margin-top: 50px;
@@ -66,11 +62,10 @@ h4 {
     transparent
   );
 
-
   position: relative;
 
   display: flex;
-height: 450px;
+  height: 450px;
   gap: 48px;
   flex-direction: column;
 
@@ -81,4 +76,3 @@ height: 450px;
     margin-top: 160px;
   }
 }
-

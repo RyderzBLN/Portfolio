@@ -38,6 +38,10 @@
       <a href="#skills">@if(globalService.isDE) { Skills } @else { Skills }</a>
 
       <a href="#projects">@if(globalService.isDE) { Projekte } @else { Projekte} </a>
+      <a [routerLink]="['/app-imprint']">
+        @if(globalService.isDE) { Impressum & <br> Datenschutz } @else { Imprint & <br> legal notice }
+      </a>
+      
       <div class="language-toggle">
         <button
           class="lang-btn"
@@ -87,6 +91,7 @@
       } @else {
       <a href="#projects"> <li>Projekts</li></a>
       }
+      <a href="app-imprint">@if(globalService.isDE) {<li>Datenschutz</li> } @else {<li>Legal notice </li>} </a>
     </ul>
   </div>
   <div class="right-contaner">

@@ -1,8 +1,20 @@
 @import "../../styles.scss";
 
+ 
+section  {
+  background: linear-gradient(
+    55.22deg,
+    $first-color 36.26%,
+    $second-color 93.28%
+  );
+  text-shadow: 3px 1px 10px rgba(206, 205, 205, 0.3); /* X, Y, Blur, Farbe */
+}
 
-section {
+.main-imprint {
+  margin: 0 auto;
+position: relative;
   padding: 24px 0px;
+  padding-top: 0px;
   word-wrap: break-word;
   color: white !important;
   font-family: "Fira Code", monospace !important;
@@ -12,44 +24,57 @@ section {
   text-align: left;
   text-align: justify;
   flex-direction: column;
-  height: 85dvh;
-  width: 100%;
-  background: linear-gradient(
-    55.22deg,
-    $first-color 36.26%,
-    $second-color 93.28%
+  height: 75dvh;
+  max-width: 1940px;
+ 
 
-  );
   overflow-y: auto;
+
+  @media (max-width: 1000px) {
+    min-height: 75dvh;
+
+  }
 
   h2 {
     padding-bottom: 18px;
     padding-top: 18px;
   }
-} 
-
+}
 
 .legal-notice {
   max-width: 97%;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (max-width: 1000px) {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+  }
 }
 
 .imprint {
-line-height: 26px;
+  margin-top: 24px;
+  width: 95% !important;
+  max-width: 97%;
+  line-height: 26px;
   display: flex;
   text-align: center;
   flex-direction: column;
   width: 100%;
-  padding-left: 45px;
+  padding-left: 10px;
   align-items: start;
   margin-bottom: 54px;
-@media (max-width: 1000px) {
+  @media (max-width: 1000px) {
     align-items: center;
     padding-left: 10px;
-}
+  }
 
-
+  a {
+    &:hover {
+      color: $primary-color;
+    }
+  }
 
   .imp-text {
     font-size: 26px;
@@ -57,18 +82,111 @@ line-height: 26px;
       text-align: center !important;
       align-items: center;
       padding-top: 4px;
+
+    }
+
+    @media (max-width: 400px){
+      font-size: 20px;
     }
   }
 
- 
-
   .imp-head {
     font-size: 32px;
-   font-weight: bold;
-   padding-bottom: 12px;
+    font-weight: bold;
+    padding-bottom: 12px;
   }
 }
 
- .imp-mail {
-    margin-top: 12px !important;
+.imp-mail {
+  white-space: wrap !important;
+  padding: 5px;
+  margin-top: 12px !important;
+}
+
+.button-div {
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  background-color: $first-color;
+  border-bottom: 1px inset black;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 8px 32px;
+  align-items: center;
+  justify-content: space-between;
+
+  display: flex;
+  gap: 24px;
+
+  @media (max-width: 1000px) {
+    padding: 8px 12px;
   }
+  a {
+    font-weight: bold;
+    margin-top: -8px;
+    font-size: 32px;
+  }
+}
+
+
+/* Größe des Scrollbalkens */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 75px;
+}
+
+/* Farbe des Scrollbalkenhintergrunds */
+::-webkit-scrollbar-track {
+  background: $first-color;
+  padding-top: 50px;
+}
+
+/* Farbe des Scrollbalkens (Thumb) */
+::-webkit-scrollbar-thumb {
+
+  background: $second-color;
+  border-radius: 1px;
+}
+
+/* Hover-Effekt auf dem Thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.language-toggle {
+  display: flex;
+  border: 1px solid $primary-color;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 80px;
+  height: 25px;
+
+}
+
+
+.lang-btn {
+
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  color: $primary-half;
+  font-size: 12px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-btn:hover {
+  color: white;
+}
+
+.lang-btn.active {
+  background-color: $primary-color;
+  color: white;
+}

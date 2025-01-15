@@ -1,4 +1,5 @@
 <footer>
+    <div class="main-footer">
     <div class="footer-main">
         <div class="left width">
             <svg width="133" height="48" viewBox="0 0 133 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,14 +40,20 @@
         </div>
         <div class="right width">
             <div class="link-container">
-            <a href="#">Github</a>
-            <a href="#">Linkedin</a>
+            <a href="https://github.com/RyderzBLN" target="_blank">Github</a>
+            <a href="https://de.linkedin.com/" target="_blank">Linkedin</a>
             <a href="#">Email</a>
-            <a href="#">Legal Notice</a>
+            <a [routerLink]="['/app-imprint']">
+                @if(globalService.isDE){
+                    Impressum <br> Datenschutzerklärung
+                } @else {
+                    Imprint <br> Legal Notice
+                }</a>
             </div>
         </div>
     </div>
     <div class="resp-name" >
         <p>Murat Catili 2024</p>
+    </div>
     </div>
 </footer>
