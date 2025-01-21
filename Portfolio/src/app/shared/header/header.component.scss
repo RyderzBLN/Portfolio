@@ -14,6 +14,11 @@ header {
 
 }
 
+.mc-logo {
+  width: 165px;
+  height: auto;
+}
+
 img {
   width: 80px;
   height: 64px;
@@ -136,6 +141,12 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 width: 100%;
+
+.svg-wappen  {
+  margin-top: 5px;
+  width: 65px;
+height: auto
+}
 @media (min-width: 769px) {
   display: none;
 }

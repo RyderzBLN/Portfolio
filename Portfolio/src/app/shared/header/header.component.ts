@@ -12,6 +12,7 @@ import { RouterLink } from '@angular/router';
 })
 export class HeaderComponent {
   constructor(public globalService: GlobalService) {}
+  
   isMenuOpen = false;
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;

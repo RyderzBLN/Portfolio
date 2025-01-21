@@ -5,6 +5,19 @@ section {
     background-color: $first-color;
 }
 
+.mc-logo {
+margin-top: -20px;
+    width: 150px;
+    height: auto;
+
+    @media (max-width: 1000px) {
+
+    margin-top: -5px;
+    width: 120px;
+    height: auto;
+    }
+}
+
 .main-footer {
 max-width: 1940px;
 margin: 0 auto;
@@ -45,7 +58,7 @@ background-color: $first-color;
 .left {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 22px;
 
     @media(max-width: 450px) {
        width: 50% !important;

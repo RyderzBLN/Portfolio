@@ -5,5 +5,5 @@ import { Injectable } from '@angular/core';
 })
 export class GlobalService {
 
-  public isDE: boolean = false;
+  public isDE: boolean = true;
 }

@@ -28,7 +28,7 @@ export class ProjectsSectionComponent {
   closeModal() {
     this.opens = false;
     this.modalIndex = 0;
-    console.log(this.modalIndex);
+
     
   }
 
@@ -37,7 +37,7 @@ export class ProjectsSectionComponent {
     if (this.modalIndex > 1) {
       this.modalIndex = 0;
     }
-    console.log(this.modalIndex);
+  
     
   }
 }

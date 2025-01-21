@@ -192,6 +192,7 @@ section {
   font-family: "Karla", monospace;
   font-size: 18px;
   font-weight: 400;
+  transition: all 0.2s ease-in-out;
 
   p {
     text-shadow: 0 0 20px rgba(61, 255, 210, 1), 0 0 40px rgba(61, 255, 210, 1);
@@ -201,6 +202,9 @@ section {
 
   cursor: pointer;
   &:hover {
+    &:hover {
+      box-shadow: 0 0 15px rgba(174, 174, 174, 1);
+    }
     p {
       animation: BigSmall 2s linear infinite;
       text-shadow: 0 0 20px rgba(61, 255, 210, 1),
@@ -221,6 +225,7 @@ section {
 }
 
 .siide-scroller-background {
+  
   position: absolute;
   display: flex;
   align-items: center;
@@ -343,6 +348,7 @@ section {
   }
 }
 .side-scroller {
+
   user-select: none;
   letter-spacing: 2px;
   font-weight: bold;
